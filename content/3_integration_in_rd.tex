@@ -1,1 +1,22 @@
 \section{Integration in $\mathbb{R}^d$}
+\subsection{Linienintegrale}
+Sei $f: [a, b] \rightarrow \mathbb{R}^{n}$ stetig, d.h. für
+\[ f(t) = (f_1(t), ~ \ldots, ~ f_n(t)) \]
+jedes $f_i$ stetig, dann ist
+\[ \int_a^b f(t) dt = \left( \int_a^b f_1(t) dt, ~ \ldots , ~ \int_a^b f_n(t) dt\right) \in \mathbb{R}^n \]
+
+Für eine parametrisierte Kurve in $\mathbb{R}^n$, d.h.
+$\gamma : [a, b] \rightarrow \mathbb{R}^n$, s.d.
+\begin{enumerate}
+\item{ $\gamma$ stetig}
+\item{2. $\exists t_0, \ldots, t_k$, ~ s.d. $t_0 = a < t_i < t_k = b$, ~~ s.d. ~
+$\gamma ~ | ~ ]t_i, t_{i-1}[ ~ \in C^1$}
+\end{enumerate}
+nennen wir $\gamma$ einen Pfad zwischen
+$\gamma(a)$ und $\gamma(b)$. 
+Das \textbf{Linienintegral von $f$ entlang $\gamma$} ist definiert als
+\[ \int_{\gamma} f(s)\cdot d\vec{s} = 
+	\int_a^b \underbrace{\underbrace{f(\gamma(t))}_{\in\mathbb{R}^n}  \cdot 
+	\underbrace{\gamma'(t)}_{\in\mathbb{R}^n}}_{\text{Skalarprodukt in } \mathbb{R}} dt  ~
+	\in \mathbb{R} \]
+und ist unabhängig der gewählten Parametrisierung!

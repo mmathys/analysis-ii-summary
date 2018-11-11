@@ -11,6 +11,10 @@ draft:
 	pdflatex -output-directory=out/ draft.tex
 	mv out/draft.pdf .
 
+twocolumn:
+	mkdir -p out
+	pdflatex -output-directory=out/ twocolumn.tex
+	mv out/twocolumn.pdf .
 
 clean:
 	rm out/*

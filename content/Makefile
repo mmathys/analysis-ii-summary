@@ -6,3 +6,6 @@ cols:
 
 draft:
 	make -C .. draft
+
+twocolumn:
+	make -C .. twocolumn 

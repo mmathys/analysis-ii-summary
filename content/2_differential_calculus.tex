@@ -277,19 +277,19 @@ $x = (x_1, ..., x_k)$, $y = (y_1, ..., y_l)$
 
 dann kann man lokal nach $b$ auflösen. Äquivalent: $\iff \exists h: f(x, h(x)) = 0$\\
 
-\textbf{Rezept: Ableitung der Auflösungsfunktion $h$:} Bsp 2- oder 3-dimensional
+\textbf{Rezept: Ableitung der Auflösungsfunktion $h$:} Bsp 2-dimensional (auflösen nach $y$) oder 3-dimensional (auflösen nach $z$)
 
 \[
-    dh(x) = -(d_y f(x, h(x)))^{-1} \cdot d_x f(x, h(x))
+    dh(x) = -\frac{d_x f(x, h(x))}{d_y f(x, h(x))}
 \]
 
 
 \[
     \nabla h(x, y) =
-        \begin{pmatrix}
-            -(d_y f(x, y, h(x, y)))^{-1} \cdot d_x f(x, y, h(x, y))\\
-            -(d_y f(x, y, h(x, y)))^{-1} \cdot d_z f(x, y, h(x, y))
-        \end{pmatrix}
+        \left(
+            -\frac{\partial_x f(x, y, h(x, y))}{\partial_z f(x, y, h(x, y))},
+            -\frac{\partial_y f(x, y, h(x, y))}{\partial_z f(x, y, h(x, y))}
+        \right)
 \]
 
 \textbf{Rezept: Typische Aufgabe} 1. $p_0$ bestimmen, sodass $f(x, y)=0$ stimmt. 2. $df(x, y)$ berechnen und $d_y$ kontrollieren, ob $\neq 0$ 3. Satz bewiesen, Ableiten der Auflösungsfunktion.

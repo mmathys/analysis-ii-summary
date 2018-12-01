@@ -1,0 +1,48 @@
+\documentclass[landscape]{article}
+\usepackage[ngerman]{babel} % Deutsche Sprachanpassungen
+\usepackage[utf8]{inputenc}
+
+\usepackage{a4wide}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage[most]{tcolorbox}
+\usepackage{physics}
+\usepackage{cite}
+\usepackage{enumerate}
+\usepackage{caption}
+\usepackage{multicol}
+\usepackage{lipsum}
+\tcbuselibrary{breakable}
+\graphicspath{ {images/} }
+
+% Seitenränder
+\geometry{a4paper, top=30mm, left=25mm, right=25mm, bottom=30mm, headsep=10mm, footskip=12mm}
+
+\setlength{\parindent}{0pt}
+
+% breckman style
+\input{breckman.tex}
+
+% -----------------------------------------------------------------------
+
+\title{Analysis II}
+
+\pagestyle{fancy}
+
+\begin{document}
+
+\footnotesize
+
+\begin{multicols}{2}
+
+
+\input{content/00_complete_summary.tex}
+
+\end{multicols}
+
+\end{document}

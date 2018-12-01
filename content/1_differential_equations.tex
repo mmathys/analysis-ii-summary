@@ -1,15 +1,128 @@
-\section{Differential Equations}
+\section{Differentialgleichungen}
 
-TODO. wichtig. abgeschlossener teil.
+\begin{Definition}{Differentialgleichung}{}
+    TODO
+\end{Definition}
 
-\subsection{Ordinary Differential Equations}
+\begin{Definition}{Ordnung, linear, homogen}{}
+    TODO
+\end{Definition}
 
-\subsection{Linear Differential Equations}
+\begin{Definition}{Anfangswertproblem}{}
+    TODO
+\end{Definition}
 
-\subsubsection{Linear Differential Equations of Order 1}
+\begin{Satz}{Grundprinzip für lineare, inhomogene Differenzialgleichungen}{}
+    TODO
+\end{Satz}
 
-\subsubsection{Linear Differential Equations with constant coefficients}
+\begin{Rezept}{Separation der Variablen}{}
+	Diese Methode eignet sich für \textbf{Differentialgleichungen erster Ordnung} und ist die einfachste Methode.
+	
+	Für eine Differentialgleichung der Form
+	\begin{equation*}
+	y' =\frac{dy}{dx}= h(x)\cdot g(y), \qquad \text{mit } g(y)\neq 0
+	\end{equation*}
+	gehen wir folgendermassen vor:
+	\begin{enumerate}
+		\item Wir nehmen alle Teile mit $x$ und alle mit $y$ auf verschiedene Seiten.
+		\begin{equation*}
+		\frac{1}{g(y)} dy=h(x)dx
+		\end{equation*}
+		\item Nun integrieren wir direkt
+		\begin{equation*}
+		\int \frac{1}{g(y)}dy = \int h(x) dx
+		\end{equation*}
+		\item Durch die unbestimmtheit der Integrale führen wir eine Konstante $C$ ein. Durch Anfangsbedingungen $y(x_0)=y_0$ (in einem Anfangswertproblem) kann diese bestimmt werden.
+	\end{enumerate}
+\end{Rezept}
 
-with multiple roots, without multiple roots\\
+\begin{Rezept}{Variation der Konstanten (1. Ordnung)}{}
+	Diese Methode eignet sich für \textbf{inhomogene Differentialgleichungen erster Ordnung}, der Form
+	
+	\begin{equation*}
+	y' = h(x) y + b(x).
+	\end{equation*}
+	
+	Wir benutzen den Grundsatz für inhomogene Differentialgleichungen. D.h. wir suchen die allgemeine homogene Lösung und eine partikuläre Lösung und addieren diese für die gesamte Lösung. Eine partikuläre Lösung kann manchmal erraten werden, ansonsten nutzen wir folgendes Rezept:
+	
+	\begin{enumerate}
+		\item Die homogene Lösung $y_{hom}(x)$ suchen wir mit der Methode \textit{Separation der Variablen}.
+		\item Die Integrationskonstante aus Schritt I fassen wir als eine von $x$ abhängige Funktion auf
+		\begin{equation*}
+		C \rightarrow C(x)
+		\end{equation*}
+		\item Die entstandene Funktion $y_p(x)$ (homogene Lösung mit $C(x)$ anstelle von $C$) setzen wir als Ansatz in die Differentialgleichung ein und lösen nach $C(x)$ auf. Dies gibt uns die partikuläre Lösung.
+		\item  Wir nutzen den Grundsatz für die gesamte Lösung
+		\begin{equation*}
+		y(x) = y_h(x) + y_p(x).
+		\end{equation*}.
+	\end{enumerate}
+\end{Rezept}
 
-rezept von übung
+\begin{Rezept}{Euler-Ansatz}{}
+	Für lineare, homogene Differentialgleichung $n-ter$ Ordnung mit konstanten Koeffizienten, können wir den \textbf{Euler-Ansatz} verwenden. Wir haben eine Gleichung der Form
+	\begin{equation*}
+	a_n y^{(n)} + a_{n-1} y^{(n-1)} + \dots + a_0 y = 0,
+	\end{equation*}
+	wobei $a_0,\dots, a_n \in \R$ und $a_n\neq 0$ sind.
+	
+	Wir wenden folgendes Rezept an:
+	\begin{enumerate}
+		\item Setze den \textbf{Euler-Ansatz} $y(x) = e^{\lambda x}$, $\lambda \in\mathbb{C}$ in die Differentialgleichung ein und berechne das \textbf{charakteristische Polynom}.
+		\item Finde die Nullstellen $\lambda_k$ mit Vielfachheiten $m_k$ des charakteristischen Polynoms und konstruiere daraus die linear unabhängigen Lösungen gemäss
+		\begin{equation*}
+		e^{\lambda x}, x \cdot e^{\lambda x}, x^2 \cdot e^{\lambda x}, \dots, x^{m-1} \cdot e^{\lambda x}.
+		\end{equation*}
+		\item Diese Lösungen bilden ein \textbf{Fundamentalsystem} der Differentialgleichung.
+		\item Die allgemeinste Lösung ist eine Linearkombination aller Lösungen im Fundamentalsystem. Die Koeffizienten sind durch die Anfangsbedingungen zu bestimmen.
+	\end{enumerate}
+\end{Rezept}
+
+\begin{Rezept}{Variation der Konstanten (2. Ordnung)}{}
+	Wir suchen die Lösung für eine Differentialgleichung der Form
+	\begin{equation*}
+	y'' + a_1 y' + a_0 y = g(x)
+	\end{equation*}
+	\begin{enumerate}
+		\item Die homogene Lösung $y_h(x)$ finden wir mittels \textbf{Euler-Ansatz}.
+		\item Wir suchen nun eine Lösung der Form $y_p(x) = C_1(x) y_1(x) + C_2(x) y_2(x)$, wobei $y_1(x)$ und $y_2(x)$ aus dem Euler-Ansatz stammen und das System
+		\begin{equation*}
+		\begin{cases} C_1'(x)y_1(x) + C_2'(x)y_2(x)=0\\C_1'(x)y_1'(x) + C_2'(x)y_2'(x)=g(x)\end{cases}
+		\qquad \Leftrightarrow \qquad \underbrace{\begin{pmatrix}
+			y_1(x) &y_2(x)\\y_1'(x) &y_2'(x)
+			\end{pmatrix}}_{=:A} \cdot \vekk{C_1'(x)}{C_2'(x)} = \vekk{0}{g(x)}
+		\end{equation*}
+		erfüllt sein muss. Wir prüfen also, ob die Determinante
+		\begin{equation*}
+		\det A = y_1(x)y_2'(x)-y_2(x)y_1'(x)
+		\end{equation*}
+		nicht verschwindet, denn aus LinAlg wissen wir, dass genau dann eine eindeutige Lösung existiert.
+		\item  Wir finden nun $C_1$ und $C_2$ und somit $y_p(x)$ entweder durch
+		\begin{enumerate}[(a)]
+			\item Inversion der Matrix \begin{equation*}
+			\vekk{C_1'(x)}{C_2'(x)} = \frac{1}{y_1(x)y_2'(x)-y_2(x)y_1'(x)} \begin{pmatrix}
+			y_2'(x) & -y_2(x)\\-y_1'(x) &y_1(x)
+			\end{pmatrix}\cdot\vekk{0}{g(x)}
+			\end{equation*}
+			und anschliessender Integration $C_1 = \int C_1'(x) dx$, $C_2 = \int C_2'(x) dx$ 
+			\item oder mit der direkten Formel
+			\begin{equation*}
+			y_p(x) = -y_1(x) \int \frac{y_2(x) g(x)}{y_1(x)y_2'(x)-y_2(x)y_1'(x)} dx + y_2(x) \int \frac{y_1(x) g(x)}{y_1(x)y_2'(x)-y_2(x)y_1'(x)}dx.
+			\end{equation*}
+		\end{enumerate}
+		\item Die gesamte Lösung erhalten wir aus $y(x) = y_h(x) + y_p(x)$.
+	\end{enumerate}
+\end{Rezept}
+
+%\subsection{Ordinary Differential Equations}
+
+%\subsection{Linear Differential Equations}
+
+%\subsubsection{Linear Differential Equations of Order 1}
+
+%\subsubsection{Linear Differential Equations with constant coefficients}
+
+%with multiple roots, without multiple roots\\
+
+%rezept von übung

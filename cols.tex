@@ -6,9 +6,13 @@
 \usepackage{calc}
 \usepackage{ifthen}
 \usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{breakable}
 \graphicspath{ {images/} }
 \usepackage[landscape]{geometry}
+\usepackage{lipsum}
 \usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{enumerate}
 
 \ifthenelse{\lengthtest { \paperwidth = 11in}}
     { \geometry{top=.5in,left=.5in,right=.5in,bottom=.5in} }
@@ -36,6 +40,10 @@
 \setcounter{secnumdepth}{0}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt plus 0.5ex}
+
+% breckman style
+\input{breckman.tex}
+
 % -----------------------------------------------------------------------
 
 \title{Analysis II}
@@ -48,11 +56,13 @@
 \begin{center}
      \Large{\textbf{Analysis II}} \\
 \end{center}
-\begin{multicols}{3}
-\setlength{\premulticols}{1pt}
-\setlength{\postmulticols}{1pt}
-\setlength{\multicolsep}{1pt}
-\setlength{\columnsep}{2pt}
+
+\begin{multicols}{2}
+
+%\setlength{\premulticols}{1pt}
+%\setlength{\postmulticols}{1pt}
+%\setlength{\multicolsep}{1pt}
+%\setlength{\columnsep}{2pt}
 
 \input{content/00_complete_summary.tex}
 

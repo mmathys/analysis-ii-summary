@@ -45,7 +45,38 @@ und ist unabhängig der gewählten Parametrisierung!
 \subsection{Sternförmig?}
 Zügs zu Star shaped?
 
-\subsection{Satz von Fubini}
-Reduzierung von mehrdimensionalen Integralen auf eine Dimension
-Sei $f: [a,b] \times [c, d]$ stetig, dann gilt
-\[ \int_a^b \int_c^d f(x, y) dx ~ dy = \int_c^d \int_a^b f(x, y) dy ~ dx = \int_{[a,b] \times [c, d]} f(x, y) dx ~ dy   \]
+
+
+\begin{Satz}{Satz von Fubini}{}
+    Reduzierung von mehrdimensionalen Integralen auf eine Dimension.
+    
+    Sei $f: [a,b] \times [c, d]$ stetig, dann gilt
+    \[ \int_a^b \int_c^d f(x, y) dx ~ dy = \int_c^d \int_a^b f(x, y) dy ~ dx = \int_{[a,b] \times [c, d]} f(x, y) dx ~ dy   \]
+
+    Es sei der Quader $Q = [a_1,a_2] \times [a_2, b_2] \times \dots \times [a_n, b_n]$ mit $f \in C^0(Q)$ gegeben. Dann gilt
+
+    \[
+        \int_Q f(x) d\mu(x) = \int_{a_1}^{b_1} dx_1 \int_{a_2}^{b_2} dx_2 \dots \int_{a_n}^{b_n} dx_n f(x_1, x_2,...,x_n)
+    \]
+\end{Satz}
+Die Integrationsreihenfolge darf vertauscht werden.\\
+
+Alternative Schreibweise von $dx ~ dy$: $\mu(x, y)$, $\mu(x+y)$.
+
+\subsection{Normalbereiche in $\mathbb{R}^2$}
+
+Sei $\Omega$ eine beschränkte Teilmenge von $\mathbb{R}^2$. $\Omega$ heisst \textbf{y-Normalbereich}, falls sich $\Omega$ wie folgt darstellen lässt:
+
+\[
+    \Omega = \{(x, y) \in \mathbb{R}^2 \mid a \leq x \leq b, f(x) \leq y \leq g(x)\}
+\]
+
+wobei $f$, $g$ stetige Funktionen der Variable $x$ sind. Die Rolle von $x$ und $y$ darf vertauscht werden (es existiert also auch ein $x$-Normalbereich).
+
+Sei \[\Omega = \{(x, y) \in \mathbb{R}^2 \mid a \leq x \leq b, f(x) \leq y \leq g(x)\}\] ein Normalbereich mit stetigen Funktionen $f$, $g$ und sei die zu integrierende Funktion $F \in C^0(\Omega)$, dann gilt:
+
+\[
+    \int_{\Omega} F d\mu = \int_a^b dx \int_{f(x)}^{g(x)} dy F(x, y)
+\]
+
+Das innere Integral wird zuerst ausgewertet.

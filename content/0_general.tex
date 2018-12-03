@@ -1,12 +1,99 @@
 \section{Allgemein}
 
+\input{content/cos_sin_picture.tex}
+
+\textbf{Limes}
+\begin{itemize}
+    \item $\lim_{x\to 0} \arctan(x) = 0$, $\lim_{x\to\infty} \arctan(x) = \frac{\pi}{2}$
+    \item $\lim_{x\to 0} \tan(x) = 0$, $\lim_{x\to\infty} \tan(x) = \infty$, $\lim_{x\to\frac{\pi}{2}} \tan(x) = \infty$
+    \item $\lim_{x\to\infty} \cos(x) = [-1, 1]$
+    \item $\lim_{x\to\infty} \sin(x) = [-1, 1]$
+\end{itemize}
+
+\textbf{Proposition von Euler, Rechnen mit sin und cos}
+\begin{enumerate}
+    \item $e^{ix} = \cos(x) + i\cdot \sin(x), x\in\R$
+    \item $\sin(x\pm y) = \sin(x)\cos(x) \pm \cos(x)\sin(y)$ 
+    \item $\cos(x\pm y) = \cos(x)cos(y) \mp \sin(x)\sin(y)$
+    \item $\sin(x+y)\sin(x-y) = \cos^2(y) - \cos^2(x) = \sin^2(x) - \sin^2(y)$
+    \item $\cos(x+y)\cos(x-y) = \cos^2(y) - \sin^2(x) = \cos^2(x) - \sin^2(y)$
+    \item $\sin{x}\cos{x} = \frac{1}{2}(\sin(x+y) + \sin(x-y))$ 
+    \item $\cos{x}\cos{y} = \frac{1}{2}(\cos(x+y) + \cos(x-y))$
+    \item  $\sin{x}\sin{y} = \frac{1}{2}(\cos(x-y)-\cos(x+y))$
+\end{enumerate}
+
+\textbf{Weitere Trigonometrische Eigenschaften: }\\
+\begin{itemize}
+    \item $\cos(x)^2 + sin(x)^2 = 1, x\in\R$
+    \item $\cos(\frac{\pi}{2}) = 0$,  $\sin(\frac{\pi}{2}) = 1$
+    \item $\cos(\pi) = -1$, $\sin(\pi) = 0$
+    \item $\cos(\pi-x) = -\cos(x)$, $\sin(\pi-x) = \sin(x)$
+    \item $\cos(x+pi) = -\cos(x)$, $\sin(x+pi) = -\sin(x)$
+    \item $\cos(2x) = \cos^2(x) - sin^2(x) = 1-2sin^2(x) = 2cos^2(x) - 1$
+    \item $\sin(2x) = 2\sin(x)\cos(x)$
+    \item $tan(2x) = \frac{2\tan(x)}{1-\tan^2(x)}$
+    \item $\sin(\frac{x}{2}) = \sqrt{\frac{1-\cos(x)}{2}}$
+    \item $\sin(\frac{x}{2}) = \sqrt{\frac{1+\cos(x)}{2}}$
+    \item $tan(\frac{x}{2} = \frac{1-\cos(x)}{\sin(x)} = \frac{sin(x)}{1-\cos(x)}$
+    \item $\sin^2(x) = \frac{1-\cos(2x)}{2}$
+    \item $\cos^2(x) = \frac{1+\cos(2x)}{2}$
+    \item $\tan{\pi + x} = \tan{x}$
+    \item $\sin{-x} = \sin{x}, \cos{-x} = \cos{x}, \tan{-x} = -\tan{x}$
+    \item Das Bild von sin (bzw cos) ist $[-1, 1]$
+    \item Für alle $(a,b)\in \R^2$, sodass $a^2+b^2 = 1$, gibt es $x\in\R$, sodass $a = \cos(x)$, $b = \sin(x)$.
+    \item $\sin(x) = \frac{2\tan(x/2)}{1+\tan^2(x/2)}$
+    \item $\cos(x) = \frac{1-\tan^2(x/2)}{1+\tan^2(x/2)}$
+\end{itemize}
+
+
+\textbf{Ableitungsregeln:}
+\begin{itemize}
+    \item \textbf{Summenregel} $(f(x)+g(x))' = f'(x) + g'(x)$\\
+    \item \textbf{Faktorregel} $(c\cdot f(x))' = c\cdot f'(x)$\\
+    \item \textbf{Produktregel} $(f(x)\cdot g(x))' = f'(x)g(x) + f(x)g'(x)$\\
+    \item \textbf{Quotientenregel} $\left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x) - f(x)g'(x)}{g^2(x)}(g\neq 0)$ \\
+    \item \textbf{Kettenregel} $(f(g(x)))' = (f\circ g)' = f'(g(x))g'(x)$\\
+\end{itemize}
+
+
+\textbf{Integrationsregeln}
+\begin{itemize}
+    \item \textbf{Summe/Differenz:} $\int_a^b (f(x) +/- g(x)) xd = \int_a^b f(x) +/- \int_a^b g(x)$\\
+    \item \textbf{Konstanter Faktor:} $\int_a^b c\cdot f(x)dx = c\cdot \int_a^b f(x)dx$\\
+    \item \textbf{Partielle Integration:} $\int_a^b f'(x)\cdot g(x)dx = \left[f(x)g(x)\right]_a^b - \int_a^b f(x)g'(x)$\\
+    \item \textbf{Substituion:} $\int_{\phi(a)}^{\phi(b)} f(x)dx = \int_a^b f(\phi(t))\phi '(t) dt$\\
+    \item \textbf{$a+c, b+c \in I$} $\int_a^b f(t+c)dt = \int_{a+c}^{b+c} f(x)dx$\\
+    \item \textbf{$ca,cb\in I$: } $\int_a^b f(ct)dt = \frac{1}{c}f(x)dx$\\
+    \item \textbf{Logarithmus: }\;(f stetig diffbar) $\int\frac{f'(t)}{f(t)}dt = \log(|f(x)|)$, bzw. $\int_a^b\frac{f'(t)}{f(t)}dt = \log(f(|b|)) - \log(f(|a|))$
+\end{itemize}
+
+\textbf{Stammfunktionen, Ableitungen}\\
+$\text{differenzierbar }\implies\text{ stetig }\implies \text{ integrierbar}$\\
+\begin{tabular}{l|l|l}
+    $f'(x)$ & $f(x)$ & $F(x)$ \\[0.5em] \hline
+    0 & c ($c\in\R)$ & $cx$ \\[0.5em]
+    $c$ & $cx$ &$\frac{c}{2}x^2$ \\[0.5em]
+    $r\cdot x^{r-1}$ & $x^r (r\in \R \backslash \{-1\}$ & $\frac{x^{r+1}}{r+1}$ \\[0.5em]
+    $\frac{-1}{x^2} = -x^{-2}$ & $\frac{1}{x}=x^{-1}$ & $\frac{2}{3}x^{\frac{2}{3}}$ \\[0.5em]
+    $\cos x$ & $\sin x$  & $-\cos x$ \\[0.5em]
+    $-\sin x$ & $\cos x$ & $\sin x$\\[0.5em]
+    $1+\tan^2x = \frac{1}{\cos^2x}$ & $\tan x$ & $-\log|\cos x|$\\[0.5em]
+    $e^x$ & $e^x$ & $e^x$\\[0.5em]
+    $c\cdot e^{cx}$ & $e^{cx}$ & $\frac{1}{c}e^{cx}$\\[0.5em]
+    $\log a \cdot a^x$ & $a^x$ & $\frac{a^x}{\log a}$\\[0.5em]
+    $\frac{1}{x}$ & $\log|x|$ & $x(\log|x|-1)$ \\[0.5em]
+    $\frac{1}{\log a\cdot x}$ & $\log_a |x|$ & $\frac{x}{\log a}(\log|x|-1)$\\[0.5em]
+     & & = $x(\log_a|x|-\log_ae)$\\[0.5em]
+    $\frac{1}{\sqrt{1-x^2}}$ & $\arcsin x$ & $x\arcsin x + \sqrt{1-x^2}$\\[0.5em]
+    $-\frac{1}{\sqrt{1-x^2}}$ & $\arccos x$ &  $x\arccos x - \sqrt{1-x^2}$\\[0.5em]
+    $\frac{1}{1+x^2}$ & $\arctan x$ & $x\arctan x - \frac{1}{2}\log(1+x^2)$\\
+    $\sinh(x)$ & $\cosh(x)$ & - \\
+    $\cosh(x)$ & $\sinh(x)$ & -\\
+    $tanh(x)$ & $\frac{1}{cosh^2(x)}$ & -
+\end{tabular}
+
 \textbf{Mitternachtsformel}
-
-\[
-    x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
-\]
-
-\includegraphics[width=7cm]{angles}
+$x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
 
 \textbf{Matrix Determinante}
 

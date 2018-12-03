@@ -1,0 +1,56 @@
+\documentclass[a4paper,twocolumn]{scrartcl}
+
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{amssymb,amsmath,amsthm,amsfonts}
+\usepackage{multicol,multirow}
+\usepackage{calc}
+\usepackage{ifthen}
+\usepackage{graphicx}
+\usepackage[most]{tcolorbox}
+\tcbuselibrary{breakable}
+\graphicspath{ {images/} }
+\usepackage[left=1cm, right=1cm, bottom=1cm, top=1cm]{geometry}
+\usepackage{lipsum}
+\usepackage[colorlinks=true,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{enumerate}
+
+\pagestyle{empty}
+
+\makeatletter
+
+
+\makeatother
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt plus 0.5ex}
+
+% style
+\input{basic.sty}
+\input{math.sty}
+
+% -----------------------------------------------------------------------
+
+\title{Analysis II}
+
+\begin{document}
+
+\raggedright
+\footnotesize
+
+\begin{center}
+     \Large{\textbf{Analysis II}} \\
+\end{center}
+
+%~ \begin{multicols}{2}
+
+%\setlength{\premulticols}{1pt}
+%\setlength{\postmulticols}{1pt}
+%\setlength{\multicolsep}{1pt}
+%\setlength{\columnsep}{2pt}
+
+\input{content/00_complete_summary.tex}
+
+%~ \end{multicols}
+
+\end{document}

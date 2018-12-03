@@ -1,19 +1,29 @@
 \section{Differentialgleichungen}
 
 \begin{Definition}{Differentialgleichung}{}
-    TODO
+    Eine \textbf{Differentialgleichung} ist eine Gleichung, in welcher eine unbekannte Funktion $y(x)$ einer oder mehreren Variablen und ihre Ableitung vorkommnt. Im Falle, dass $y$ eine auf dem Intervall $I \subset \R$ definierte Funktion ist \[y: I \subset \R \to \R,\] spricht man von einer \textbf{gewöhnlichen Differentialgleichung}.
 \end{Definition}
 
 \begin{Definition}{Ordnung, linear, homogen}{}
-    TODO
+    Die \textbf{Ordnung} einer Gleichung ist die höchste vorkommende Ableitung. Bsp: $y''$ $\implies$ 2.\\
+    
+    Eine Differentialgleichung heisst \textbf{linear}, falls jeder Term $y$, $y'$, $y''$ usw. nur linear vorkommt. Wichtig: Falls $y_1(x)$ und $y_2(x)$ Lösungen der selben Differentialgleichung sind, dass ist auch die Linearkombination $ay_1(x) + by_2(x)$.\\
+    
+    Eine Differentialgleichung heisst \textbf{homogen}, falls keine Terme vorkommen, die rein von den Funktionsvariablen abhängen (also kein $y$, $y''$, ... enthalten). Sonst heisst die Gleichung \textbf{inhomogen}.
 \end{Definition}
 
 \begin{Definition}{Anfangswertproblem}{}
-    TODO
+    Ein \textbf{Anfangswertproblem} $n$-ter Ordnung ist eine gewöhnliche Differentialgleichung $n$-ter Ordnung zusammen mit $n$ Anfangsbedingungen.
 \end{Definition}
 
 \begin{Satz}{Grundprinzip für lineare, inhomogene Differenzialgleichungen}{}
-    TODO
+    Die allgemeine Lösung einer linearen, inhomogenen Differentialgleichung hat die Form
+    \[
+        \underbrace{y(x)}_{\text{Gesamtlösung}}
+        = \underbrace{y_{hom}(x)}_{\text{allg. homogene Lösung}}
+        + \underbrace{y_p(x)}_{\text{partikuläre Lösung}}
+    \]
+    
 \end{Satz}
 
 \begin{Rezept}{Separation der Variablen}{}
@@ -33,7 +43,7 @@
 		\begin{equation*}
 		\int \frac{1}{g(y)}dy = \int h(x) dx
 		\end{equation*}
-		\item Durch die unbestimmtheit der Integrale führen wir eine Konstante $C$ ein. Durch Anfangsbedingungen $y(x_0)=y_0$ (in einem Anfangswertproblem) kann diese bestimmt werden.
+		\item Durch die Unbestimmtheit der Integrale führen wir eine Konstante $C$ ein. Durch Anfangsbedingungen $y(x_0)=y_0$ (in einem Anfangswertproblem) kann diese bestimmt werden.
 	\end{enumerate}
 \end{Rezept}
 
@@ -113,6 +123,88 @@
 		\end{enumerate}
 		\item Die gesamte Lösung erhalten wir aus $y(x) = y_h(x) + y_p(x)$.
 	\end{enumerate}
+\end{Rezept}
+
+\begin{Rezept}{Substitution}{}
+	\textbf{Gleichungen der Form} $\boxed{y'=h\left(\frac{y}{x}\right)}$\\
+	Substitution
+	\begin{equation*}
+	z(x)=\frac{y(x)}{x} \qquad \Leftrightarrow \qquad y(x)=x z(x),
+	\end{equation*}
+	dann wird $y'$ durch
+	\begin{equation*}
+	y'=z+xz'
+	\end{equation*}
+	ersetzt.\\
+	
+	\textbf{Gleichungen der Form} $\boxed{y'=h(ax+by+c)}$\\
+	Substitution
+	\begin{equation*}
+	z(x)=ax+by(x)+c \qquad \Leftrightarrow \qquad y=\frac{z-ax-c}{b},
+	\end{equation*}
+	dann wird $y'$ durch
+	\begin{equation*}
+	y'=\frac{z'-a}{b}
+	\end{equation*}
+	ersetzt.\\
+	
+	\textbf{Gleichungen der Form} $\boxed{y'=h\left(\frac{ax + by + c}{dx + ey + f}\right)}$\\
+	Wir wollen $y(x)$ und $x$ ersetzen. Wir lösen das Gleichungssystem
+	\begin{equation*}
+	\begin{cases}
+	ax+by+c=0\\dx+ey+f=0
+	\end{cases}
+	\end{equation*}
+	und wollen eine eindeutige Lösung $(x_0,y_0)$, d.h. wir fordern
+	\begin{equation*}
+	\det \begin{pmatrix}a &b \\d &e\end{pmatrix}\neq 0.
+	\end{equation*}
+	Jetzt setzen wir \begin{equation*}
+	z=y-y_0 \qquad \text{und} \qquad t=x-x_0.
+	\end{equation*}
+	Dann werden $y'$ und $z'$ zu 
+	\begin{equation*}
+	y'=\frac{dy}{dx} = \frac{d(z+y_0)}{d(t+x_0)} = \frac{dz}{dt} = z'.
+	\end{equation*}\\
+	\textbf{Gleichungen der Form} $\boxed{y'=\frac{y}{x}h(xy)}$\\
+	Substitution 
+	\begin{equation*}
+	z(x)=xy(x) \qquad \Leftrightarrow \qquad y=\frac{z(x)}{x},
+	\end{equation*}
+	dann wird $y'$ durch
+	\begin{equation*}
+	y'=\frac{xz'-z}{x^2}
+	\end{equation*}
+	ersetzt.\\
+\end{Rezept}
+
+\begin{Rezept}{Methode des direkten Ansatzes}{}
+	Der Ansatz ist geeignet für lineare, inhomogene DGLs $n$-ter Ordnung mit konstanten Koeffizienten. Also eine DGL der Form
+	\begin{equation*}
+	a_n y^{(n)} + a_{n-1} y^{(n-1)}+\cdots+a_0y = b(x).
+	\end{equation*}
+	Die homogene Lösung finden wir mit dem Euler-Ansatz. Für die partikuläre Lösung nutzen wir folgende Idee:
+	\begin{center}
+		$\boxed{\text{Der Ansatz für } y_p(x) \text{hat die selbe Form wie der inhomogene Term } b(x).}$
+	\end{center}
+	\begin{center}
+		\begin{tabular}{|c|c|}
+			\hline 
+			Inhomogener Term $b(x)$ & Ansatz für $y_p(x)$ \\ 
+			\hline \hline
+			$\sum_{i=0}^m b_i x^i$ &	$\sum_{i=0}^m A_i x^i$  \\ 
+			$e^{\alpha x}\sum_{i=0}^m b_i x^i$& $e^{\alpha x} \sum_{i=0}^m A_i x^i$ \\ 
+			$\sin(\omega x)\sum_{i=0}^m b_i x^i + \cos(\omega x)\sum_{i=0}^m c_i x^i$ &  	$\sin(\omega x)\sum_{i=0}^m A_i x^i + \cos(\omega x)\sum_{i=0}^m B_i x^i$\\ 
+			$\sinh(\omega x)\sum_{i=0}^m b_i x^i + \cosh(\omega x)\sum_{i=0}^m c_i x^i$ &  	$\sinh(\omega x)\sum_{i=0}^m A_i x^i + \cosh(\omega x)\sum_{i=0}^m B_i x^i$ \\ 
+			$e^{\alpha x}\sin(\omega x)\sum_{i=0}^m b_i x^i + e^{\alpha x}\cos(\omega x)\sum_{i=0}^m c_i x^i$ &  	$e^{\alpha x}\sin(\omega x)\sum_{i=0}^m A_i x^i + e^{\alpha x}\cos(\omega x)\sum_{i=0}^m B_i x^i$\\ 
+			\hline 
+		\end{tabular} 
+	\end{center}
+	\textbf{Bemerkung I:} Verschiedene Ansätze können additiv kombiniert werden. So wählt man für $b(x)=5x + \sin(x)e^{3x}$ als Ansatz
+	\begin{equation*}
+	y_p(x) = \underbrace{Ax + B}_{\text{Teil I}} + \underbrace{(C+\sin x + D \cos x)e^{3x}}_\text{Teil II}.
+	\end{equation*}
+	\textbf{Bemerkung II:} Wenn ein Teil der für $y_p(x)$ zu wählende Funktion bereits in der Lösung des homogenen Problems vorhanden ist, wird der Ansatz zusätzlich mit $x$ multipliziert. Wenn z.B. die homogene Lösung die Form $y_h(x) = Ax + B$ hat, wählt man anstelle des Ansatzes $y_p(x) = ax+b \Rightarrow y_p(x) = x\cdot(ax+b)$.
 \end{Rezept}
 
 %\subsection{Ordinary Differential Equations}

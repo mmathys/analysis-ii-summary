@@ -2,17 +2,9 @@
 
 \input{content/cos_sin_picture.tex}
 
-\textbf{Limes}
-\begin{itemize}
-    \item $\lim_{x\to 0} \arctan(x) = 0$, $\lim_{x\to\infty} \arctan(x) = \frac{\pi}{2}$
-    \item $\lim_{x\to 0} \tan(x) = 0$, $\lim_{x\to\infty} \tan(x) = \infty$, $\lim_{x\to\frac{\pi}{2}} \tan(x) = \infty$
-    \item $\lim_{x\to\infty} \cos(x) = [-1, 1]$
-    \item $\lim_{x\to\infty} \sin(x) = [-1, 1]$
-\end{itemize}
-
-\textbf{Proposition von Euler, Rechnen mit sin und cos}
-\begin{enumerate}
-    \item $e^{ix} = \cos(x) + i\cdot \sin(x), x\in\R$
+\begin{Rechenregeln}{Sinus und Cosinus}{}
+    \begin{itemize}
+    \item $e^{ix} = \cos(x) + i\cdot \sin(x)$
     \item $\sin(x\pm y) = \sin(x)\cos(x) \pm \cos(x)\sin(y)$ 
     \item $\cos(x\pm y) = \cos(x)cos(y) \mp \sin(x)\sin(y)$
     \item $\sin(x+y)\sin(x-y) = \cos^2(y) - \cos^2(x) = \sin^2(x) - \sin^2(y)$
@@ -20,11 +12,7 @@
     \item $\sin{x}\cos{x} = \frac{1}{2}(\sin(x+y) + \sin(x-y))$ 
     \item $\cos{x}\cos{y} = \frac{1}{2}(\cos(x+y) + \cos(x-y))$
     \item  $\sin{x}\sin{y} = \frac{1}{2}(\cos(x-y)-\cos(x+y))$
-\end{enumerate}
-
-\textbf{Weitere Trigonometrische Eigenschaften: }\\
-\begin{itemize}
-    \item $\cos(x)^2 + sin(x)^2 = 1, x\in\R$
+    \item $\cos(x)^2 + sin(x)^2 = 1$
     \item $\cos(\frac{\pi}{2}) = 0$,  $\sin(\frac{\pi}{2}) = 1$
     \item $\cos(\pi) = -1$, $\sin(\pi) = 0$
     \item $\cos(\pi-x) = -\cos(x)$, $\sin(\pi-x) = \sin(x)$
@@ -43,33 +31,44 @@
     \item Für alle $(a,b)\in \R^2$, sodass $a^2+b^2 = 1$, gibt es $x\in\R$, sodass $a = \cos(x)$, $b = \sin(x)$.
     \item $\sin(x) = \frac{2\tan(x/2)}{1+\tan^2(x/2)}$
     \item $\cos(x) = \frac{1-\tan^2(x/2)}{1+\tan^2(x/2)}$
-\end{itemize}
+    \end{itemize}
+\end{Rechenregeln}
 
+\begin{Rechenregeln}{Ableitung}{}
+    \begin{itemize}
+        \item \textbf{Summenregel} $(f(x)+g(x))' = f'(x) + g'(x)$
+        \item \textbf{Faktorregel} $(c\cdot f(x))' = c\cdot f'(x)$
+        \item \textbf{Produktregel} $(f(x)\cdot g(x))' = f'(x)g(x) + f(x)g'(x)$
+        \item \textbf{Quotientenregel} $\left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x) - f(x)g'(x)}{g^2(x)}(g\neq 0)$
+        \item \textbf{Kettenregel} $(f(g(x)))' = (f\circ g)' = f'(g(x))g'(x)$
+    \end{itemize}
+\end{Rechenregeln}
 
-\textbf{Ableitungsregeln:}
-\begin{itemize}
-    \item \textbf{Summenregel} $(f(x)+g(x))' = f'(x) + g'(x)$\\
-    \item \textbf{Faktorregel} $(c\cdot f(x))' = c\cdot f'(x)$\\
-    \item \textbf{Produktregel} $(f(x)\cdot g(x))' = f'(x)g(x) + f(x)g'(x)$\\
-    \item \textbf{Quotientenregel} $\left(\frac{f(x)}{g(x)}\right)' = \frac{f'(x)g(x) - f(x)g'(x)}{g^2(x)}(g\neq 0)$ \\
-    \item \textbf{Kettenregel} $(f(g(x)))' = (f\circ g)' = f'(g(x))g'(x)$\\
-\end{itemize}
-
-
-\textbf{Integrationsregeln}
-\begin{itemize}
-    \item \textbf{Summe/Differenz:} $\int_a^b (f(x) +/- g(x)) xd = \int_a^b f(x) +/- \int_a^b g(x)$\\
-    \item \textbf{Konstanter Faktor:} $\int_a^b c\cdot f(x)dx = c\cdot \int_a^b f(x)dx$\\
-    \item \textbf{Partielle Integration:} $\int_a^b f'(x)\cdot g(x)dx = \left[f(x)g(x)\right]_a^b - \int_a^b f(x)g'(x)$\\
-    \item \textbf{Substituion:} $\int_{\phi(a)}^{\phi(b)} f(x)dx = \int_a^b f(\phi(t))\phi '(t) dt$\\
-    \item \textbf{$a+c, b+c \in I$} $\int_a^b f(t+c)dt = \int_{a+c}^{b+c} f(x)dx$\\
-    \item \textbf{$ca,cb\in I$: } $\int_a^b f(ct)dt = \frac{1}{c}f(x)dx$\\
+\begin{Rechenregeln}{Integration}{}
+    \begin{itemize}
+    \item \textbf{Summe/Differenz:} $\int_a^b (f(x) +/- g(x)) xd = \int_a^b f(x) +/- \int_a^b g(x)$
+    \item \textbf{Konstanter Faktor:} $\int_a^b c\cdot f(x)dx = c\cdot \int_a^b f(x)dx$
+    \item \textbf{Partielle Integration:} $\int_a^b f'(x)\cdot g(x)dx = \left[f(x)g(x)\right]_a^b - \int_a^b f(x)g'(x)$
+    \item \textbf{Substituion:} $\int_{\phi(a)}^{\phi(b)} f(x)dx = \int_a^b f(\phi(t))\phi '(t) dt$
+    \item \textbf{$a+c, b+c \in I$} $\int_a^b f(t+c)dt = \int_{a+c}^{b+c} f(x)dx$
+    \item \textbf{$ca,cb\in I$: } $\int_a^b f(ct)dt = \frac{1}{c}f(x)dx$
     \item \textbf{Logarithmus: }\;(f stetig diffbar) $\int\frac{f'(t)}{f(t)}dt = \log(|f(x)|)$, bzw. $\int_a^b\frac{f'(t)}{f(t)}dt = \log(f(|b|)) - \log(f(|a|))$
-\end{itemize}
+    \end{itemize}
+\end{Rechenregeln}
 
-\textbf{Stammfunktionen, Ableitungen}\\
-$\text{differenzierbar }\implies\text{ stetig }\implies \text{ integrierbar}$\\
-\begin{tabular}{l|l|l}
+\begin{Rechenregeln}{Limes von Sinus und Cosinus}{}
+    \begin{itemize}
+    \item $\lim_{x\to 0} \arctan(x) = 0$, $\lim_{x\to\infty} \arctan(x) = \frac{\pi}{2}$
+    \item $\lim_{x\to 0} \tan(x) = 0$, $\lim_{x\to\infty} \tan(x) = \infty$, $\lim_{x\to\frac{\pi}{2}} \tan(x) = \infty$
+    \item $\lim_{x\to\infty} \cos(x) = [-1, 1]$
+    \item $\lim_{x\to\infty} \sin(x) = [-1, 1]$
+    \end{itemize}
+\end{Rechenregeln}
+
+
+\begin{Rechenregeln}{Stammfunktionen, Ableitungen}{}
+    $\text{differenzierbar }\implies\text{ stetig }\implies \text{ integrierbar}$\\
+    \begin{tabular}{l|l|l}
     $f'(x)$ & $f(x)$ & $F(x)$ \\[0.5em] \hline
     0 & c ($c\in\R)$ & $cx$ \\[0.5em]
     $c$ & $cx$ &$\frac{c}{2}x^2$ \\[0.5em]
@@ -90,24 +89,24 @@ $\text{differenzierbar }\implies\text{ stetig }\implies \text{ integrierbar}$\\
     $\sinh(x)$ & $\cosh(x)$ & - \\
     $\cosh(x)$ & $\sinh(x)$ & -\\
     $tanh(x)$ & $\frac{1}{cosh^2(x)}$ & -
-\end{tabular}
+    \end{tabular}
+\end{Rechenregeln}
 
 \textbf{Mitternachtsformel}
 $x_{1, 2} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
 
 \textbf{Matrix Determinante}
-
-\[
+$
     \begin{vmatrix}
         a & b\\
         c & d
     \end{vmatrix} = ad-bc
-\]
+$
 
 \textbf{Matrix Invertierbarkeit}: Eine quadratische Matrix ist genau dann invertierbar, falls die Determinante $\neq 0$.
 
 \textbf{Matrix positiv definit}: Alle Eigenwerte $\lambda_1, ..., \lambda_n > 0$, \textbf{negativ definit:} Alle Eigenwerte $\lambda_1, ..., \lambda_n < 0$, \textbf{indefinit:} Eigenwerte sind positiv und negativ.\\
 
-\textbf{Skalarprodukt} \[ x \cdot y = \sum_{i=1}^n x_i y_i \]
+\textbf{Skalarprodukt} $x \cdot y = \sum_{i=1}^n x_i y_i$
 
 \textbf{TODO! Partielle Integration}

@@ -1,5 +1,17 @@
 \section{Differentialrechnung in $\R^d$}
 
+\subsection{Allgemein}
+
+\textbf{Beschränkt, Geschlossen, Kompakt:}
+
+\textbf{Beschränkt (bounded)} Falls $||x||$ beschränkt für alle $x \in M$.\\
+
+\textbf{Geschlossen (closed)} Jede Folge $(x_n)$ mit $x_n \in M$ ist $\lim (x_n) \in M$.\\
+
+\textbf{Kompakt (compact)} Falls beschränkt und geschlossen\\
+
+\subsection{Stetigkeit}
+
 \begin{Definition}{Stetigkeit (Continuity)}{}
     Normale Definition:
     \[
@@ -40,7 +52,9 @@ $f$ nicht integrierbar $\Rightarrow$ $f$ nicht stetig $\Rightarrow$ $f$ nicht di
     Sei $f$ die zu prüfende Funktion. 1) $f$ muss überall definiert sein. 2) $\lim_{x \rightarrow a} f(x)$ existiert. 3) $\lim_{x \rightarrow a} f(x) = f(a)$.
 \end{Rezept}
 
-\begin{Definition}{Differenzierbarkeit (Differentiability)}{}
+\subsection{Differenzierbarkeit}
+
+\begin{Definition}{Differenzierbarkeit}{}
     Sei $\Omega \subset \mathbb{R}$ offen, $f$ : $\Omega \to \mathbb{R}$, $x_0\in\Omega$. $f$ heisst \textbf{differenzierbar an Stelle $x_0$}, falls der Grenzwert
     \[
     \lim_{x\ to x_0} \frac{f(x) - f(x_0)}{x - x_0} =:
@@ -54,11 +68,17 @@ $f$ diffbar $\Leftrightarrow$ alle Teil-$f$ sind diffbar.
 
 $f,g$ diffbar $\Rightarrow$ $f+g$, $f \cdot g$, $\frac{f}{g}$, $g \circ f$ diffbar
 
+TODO: vielleicht nummern im skript zu chain rule usw?
+
 TODO: skript proposition 3.4.4
 
 TODO: regeln differenzierbarkeit: addition, multiplikation, division, verkettung (proposition 3.4.9)
 
 TODO: tangent space of $f$
+
+\begin{Definition}{Partielle Differenzierbarkeit}{}
+	
+\end{Definition}
 
 \textbf{Partielle Differenzierbarkeit}: $f$: $\mathbb{R}^n \rightarrow \mathbb{R}^m$, falls:
 
@@ -74,7 +94,12 @@ oder generell für alle $e_i$ zusammengefasst in Richtung $v \in \mathbb{R}^n$
 
 Dieser $\lim$ existiert $\Leftrightarrow$ in Richtung $e_i$ an Stelle $x_0$ partiell differenzierbar.\\
 
-\textbf{Totale Differenzierbarkeit}: TODO, hatten wir das im Skript?
+\textbf{Totale Differenzierbarkeit}: TODO, hatten wir das im Skript: Ja: Def 3.4.2 und Prop. 3.4.4\\
+
+Prop. 3.4.7!
+
+\textbf{Tangent space}
+
 
 \subsection{Stetigkeit vs Differenzierbarkeit}
 
@@ -95,13 +120,6 @@ Existiert eine lineare Abbildung $A$: $\mathbb{R}^n \rightarrow \mathbb{R}^m$ so
 Ja $\Rightarrow$ $f$ ist diffbar!\\
 Nein $\Rightarrow$ $f$ ist nicht diffbar.
 
-\subsection{Beschränkt, Geschlossen, Kompakt}
-
-\textbf{Beschränkt (bounded)} Falls $||x||$ beschränkt für alle $x \in M$.\\
-
-\textbf{Geschlossen (closed)} Jede Folge $(x_n)$ mit $x_n \in M$ ist $\lim (x_n) \in M$.\\
-
-\textbf{Kompakt (compact)} Falls beschränkt und geschlossen\\
 
 \subsection{Partielle Ableitung (Partial Derivative)}
 
@@ -149,6 +167,8 @@ $\text{grad}(u^n) = n \cdot u^{n-1} \cdot \text{grad}(u)$ ($n\neq 0$).\\
     D_u f(a) = \tilde{u} \cdot \nabla f(a)
 \]
 
+Existenz Directional derivative: skript prop 3.4.15
+
 \subsubsection{Hesse-Matrix (Hessian Matrix)}    
 
 \[
@@ -178,7 +198,7 @@ $a_{11} < 0 \iff$ negativ definit;
 
 sonst indefinit.
 
-\subsubsection{Satz von Schwarz}
+\subsubsection{Satz von Schwarz (Higher derivatives)}
 
 $f \in C^2$. Gilt nur für zwei und drei verschiedene Variablen. Beliebige Potenzen von $x_i$ und $x_j$ möglich.
 
@@ -203,6 +223,15 @@ $f \in C^2$. Gilt nur für zwei und drei verschiedene Variablen. Beliebige Poten
         \end{pmatrix}
 \]
 
+Chain rule für Jakobi Matrix: Prop. 3.4.9
+
+\subsection{Change of variable}
+
+Seien $x, y$ die alten Variablen und $u, v$ die neuen Variablen. Erstelle Abbildung $h:$ Neu $\to$ Alt, also $h: (u, v) \mapsto (x, y)$. Sei $f: (x, y) \to \mathbb{E}$, erstelle $g = f \circ h = h(f(x))$. $d (f \circ g) (x_0) = df(g(x_0)) \cdot dg(x_0)$
+
+Übungsstunde 5: CHANGE OF VARIABLE?.??.? skript 3.6 TODO THIS
+
+
 \subsection{Taylorpolynome}
 
 \[
@@ -222,13 +251,13 @@ $f \in C^2$. Gilt nur für zwei und drei verschiedene Variablen. Beliebige Poten
 
 \textbf{Rezept Tangentialebene}: Tangentialebene in $P=(x_0, y_0, f(x_0, y_0))^T$ = Taylorpolynom 1. Ordnung in $x_0, y_0$.
 
-\subsection{Change of variable}
+\subsection{Extremstellen (critical points)}
 
-Seien $x, y$ die alten Variablen und $u, v$ die neuen Variablen. Erstelle Abbildung $h:$ Neu $\to$ Alt, also $h: (u, v) \mapsto (x, y)$. Sei $f: (x, y) \to \mathbb{E}$, erstelle $g = f \circ h = h(f(x))$. $d (f \circ g) (x_0) = df(g(x_0)) \cdot dg(x_0)$
+defs: critical points, max, min\\
 
-Übungsstunde 5: CHANGE OF VARIABLE?.??.? skript 3.6 TODO THIS
+degenerate / non-degenerate critical point 3.8.6 (+INTUITION)\\
 
-\subsection{Extremstellen}
+critical point, eigenvalues of hesse matrix zusammenfahang (?)\\
 
 \textbf{Rezept}: 1) Gradient berechnen 2) Gradient $=0$ setzen $\implies$ kritische Punkte. 3) Hessematrix berechnen 4) für jeden kritischen Punkt: Falls die Hessematrix positiv definit ist $\implies$ lokales Minimum; falls Hessematrix negativ definit ist $\implies$ lokales Maximum; sonst Sattelpunkt.\\
 
@@ -247,7 +276,13 @@ um zu erkennen, wo $f$ mit welchen Werten Extrema annimmt.
 
 TODO: Rezepte zum Finden
 
+\subsection{Satz der Umkehrabbildung}
+
+theorem 3.10.2\\
+
 \subsection{Satz der Impliziten Funktion}
+
+theorem 3.10.4\\
 
 Ziel: Existenz von lokalen Umkehrungen. ''Implizit'', weil die Form der Gleichung stets ein Gleichungssystem impliziert. Form:
 
@@ -305,5 +340,5 @@ dann kann man lokal nach $b$ auflösen. Äquivalent: $\iff \exists h: f(x, h(x))
 
 \textbf{Rezept: Typische Aufgabe} 1. $p_0$ bestimmen, sodass $f(x, y)=0$ stimmt. 2. $df(x, y)$ berechnen und $d_y$ kontrollieren, ob $\neq 0$ 3. Satz bewiesen, Ableiten der Auflösungsfunktion.
 
-\subsection{Satz der Umkehrabbildung}
+
 

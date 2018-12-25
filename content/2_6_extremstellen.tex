@@ -1,0 +1,96 @@
+%TODO study extremstellen
+
+\subsection{Extremstellen (critical points)}
+
+defs: critical points, max, min\\
+
+degenerate / non-degenerate critical point 3.8.6 (+INTUITION)\\
+
+critical point, eigenvalues of hesse matrix zusammenfahang (?)\\
+
+\textbf{Rezept}: 1) Gradient berechnen 2) Gradient $=0$ setzen $\implies$ kritische Punkte. 3) Hessematrix berechnen 4) für jeden kritischen Punkt: Falls die Hessematrix positiv definit ist $\implies$ lokales Minimum; falls Hessematrix negativ definit ist $\implies$ lokales Maximum; sonst Sattelpunkt.\\
+
+\textbf{Rezept für abgegrenzte Skalarfelder}: 1) Skalarfeld nach kritischen Punkten untersuchen 2) Alle Begrenzungen des Skalarfelder einzeln nach kritischen Punkten berechnen. Beispiel Dreieck: alle Seiten parametrisieren und alle Eckpunkte untersuchen.
+
+\begin{Rezept}[label=R1]{Extremwertaufgaben ohne Nebenbedingungen}{}
+	Gegeben: $f:\Omega\subset \mathbb{R}^n \to \mathbb{R}$ mit $\Omega$ offen (d.h. ohne Rand) und $f$ von der Klasse $C^2$.\\
+	Gesucht: Extremalstellen von $f$ in $\Omega$.\\
+	\newline
+	\textbf{Lösungsschritt I:}\\
+	Finde die kritischen Punkte $\{x_0\} \in \Omega$. D.h. alle Punkte, für die gilt
+	\begin{equation*}
+	df(x_0)=0
+	\end{equation*}
+	und $x_0 \in \Omega$.\\
+	\textbf{Lösungsschritt II:}\\
+	Untersuche die Hesse-Matrix von $f$ in den Punkten $\{x_0\}$ um über die Art der Extremum zu entscheiden.
+	\begin{align*}
+	\text{H}_f(x_0) \text{ ist positiv definit} \qquad &\Rightarrow \qquad x_0 \text{ ist ein lokales Minimum von} f\\
+	\text{H}_f(x_0) \text{ ist negativ definit} \qquad &\Rightarrow \qquad x_0 \text{ ist ein lokales Maximum von} f\\
+	\text{H}_f(x_0) \text{ ist indefinit} \qquad &\Rightarrow \qquad x_0 \text{ ist ein Sattelpunkt von} f
+	\end{align*}
+	Wenn die Hesse-Matrix keine klare Aussage ergibt (degenerierte kritische Punkte), muss man die Funktion in einer Umgebung abschätzen (um ein Max/Min zu zeigen) oder konkrete Gegenbeispiele finden.
+\end{Rezept}
+
+\begin{Rezept}[label=R2]{Extremwerteaufgaben mit "'einfachen"' Nebenbedingungen}{}
+	Gegeben: $f:\Omega\subset \mathbb{R}^n \to \mathbb{R}$ mit Rand $\partial{\Omega}$ und $f$ von der Klasse $C^2$.\\
+	Gesucht: Extremalstellen von $f$ in $\Omega$.\\
+	\newline
+	\textbf{Lösungsschritt I:}\\
+	Wir untersuchen das Innere $\overset{\circ}{\Omega}$ analog zu Rezept \ref{R1}.\\
+	\newline
+	\textbf{Lösungsschritt II:}\\
+	Wir parametrisieren den Rand $\partial \Omega$ durch $\gamma(t)$. Die kritischen Punkte sind dann die Punkte $\gamma(t)$ für die gilt
+	\begin{equation*}
+	\dv{t}(f\circ \gamma)(t) = 0.
+	\end{equation*}
+	\newline
+	\textbf{Lösungsschritt III:}\\
+	Bestimme die Art der kritischen Punkte.
+	\begin{itemize}
+		\item Variante 1 (nur kleinstes Min/ grösstes Max): \\Werte alle kritischen Punkte auf dem Rand explizit aus. D.h. berechne $f(\gamma(t))$.
+		\item Variante 2 (Min/Max/Sattelpunkt):\\
+		Die Funktion $f(\gamma(t))$ ist nur von einer Variable abhängig. Bestimme die Art der kritischen Punkte anhand der Kriterien für 1D-Funktionen.
+	\end{itemize}
+	
+	\textbf{Lösungsschritt IV:}\\
+	Ist der Rand stückweise parametrisiert durch $\gamma_1,\gamma_2,\dots$, muss die Funktion zusätzlich an allen Anfangs- und Endpunkten der $\gamma_i$  explizit ausgewertet werden.\\
+	\newline
+	\textit{Bemerkung: Das Wort "'einfach"' bedeutet hier, dass wir eine Parametrisierung für den Rand finden können.}
+\end{Rezept}
+
+\begin{Rezept}{Extremwertaufgaben mit Nebenbedingungen}{}
+	Gegeben: $f:\Omega\subset \R^n \to \R$ und $g:\Omega \to \R^l$ der Klasse $C^1$.\\
+	Gesucht: ein Extremum der Funktion $f$ unter der Nebenbedingung $g=0$.\\
+	\newline
+	\textbf{Lösungsschritt I:}\\
+	Bilde die Lagrange-Funktion
+	\begin{equation*}
+	L(x_1,\dots,x_n,\lambda) = f(x_1,\dots,x_n) - \lambda_1 g_1(x_1,\dots,x_n) - \dots - \lambda_l g_l(x_1,\dots,x_n),
+	\end{equation*}
+	wobei $g_1,\dots,g_l$ die $l$ Komponenten von $g$ sind. Oft ist $l=1$.\\
+	\newline
+	\textbf{Lösungsschritt II:}\\
+	Bestimme die kriischen Punkte von L, d.h. löse
+	\begin{align*}
+	\pdv{L}{x_1} &= \pdv{f}{x_1}-\lambda_1\pdv{g_1}{x_1} - \dots -\lambda_l\pdv{g_l}{x_1} = 0\\
+	\vdots\\
+	\pdv{L}{x_n} &= \pdv{f}{x_n}-\lambda_1\pdv{g_1}{x_n} - \dots -\lambda_l\pdv{g_l}{x_n} = 0.
+	\end{align*}
+	
+	Löse dieses Gleichungssystem mit den zusätzlichen Gleichungen von $g=0$.\\
+	\newline
+	\textbf{Lösungsschritt III:}\\
+	Die Lösungen $(x_1,\dots,x_n)$ sind die Kandidaten für Extremalstellen von $f$. Untersuche die Hesse-Matrix von L um den Typ zu bestimmen.
+	\begin{align*}
+	\text{Hess}(L)(x_0,\lambda)\text{ ist positiv definit} \quad &\rightarrow  \quad 
+	x_0 \text{ ist ein lokales Minimum von } f \text{ auf } g^{-1}(0),\\
+	\text{Hess}(L)(x_0,\lambda)\text{ ist negativ definit} \quad &\rightarrow  \quad x_0 \text{ ist ein lokales Maximum von } f \text{ auf } g^{-1}(0),\\
+	\text{Hess}(L)(x_0,\lambda)\text{ ist indefinit} \quad &\rightarrow  \quad x_0 \text{ ist ein Sattelpunkt von } f \text{ auf } g^{-1}(0).
+	\end{align*}
+	
+	Ist man nur an den \textbf{globalen Extremwerten} interessiert, spart man sich diesen Schritt und wertet stattdessen die Funktion $f$ an den Kandidaten aus.\\
+	\newline
+	\textbf{Lösungsschritt IV:}\\
+	Ist man auch an Extremalstellen im Innern $\overset{\circ}{\Omega}$ interessiert, sucht man diese mit dem bereits bekannten Rezept.
+\end{Rezept}

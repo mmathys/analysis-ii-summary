@@ -1,0 +1,43 @@
+%TODO study stetigkeit
+
+\subsection{Stetigkeit}
+
+\begin{Definition}{Stetigkeit (Continuity)}{}
+    Normale Definition:
+    \[
+    \lim_{x\rightarrow x_0} f(x) = f(x_0)
+    \]
+    Definition Stetigkeit mit Folgen: Für jede Folge $(x_n)$ sodass $x_n \rightarrow x$ für $x\rightarrow \infty $:
+    \[
+    (f(x_n)) \rightarrow f(x)
+    \]
+\end{Definition}
+
+Sei $f,g$ stetig: $f+g$, $f\cdot g$, $\frac{f}{g}$, $f \circ g$ stetig.
+
+Falls $f$ stetig, gilt
+
+\[
+    \lim_{x \rightarrow a} f(x) = f(\lim_{x\rightarrow a} x)
+\]
+
+$f$ diffbar $\Rightarrow$ $f$ stetig $\Rightarrow$ $f$ integrierbar
+
+$f$ nicht integrierbar $\Rightarrow$ $f$ nicht stetig $\Rightarrow$ $f$ nicht diffbar.\\
+
+\begin{Rezept}{Polarkoordinatentrick (Change of Variable, Coordinates)}{}
+    Ziel: Zeige oder widerlege Stetigkeit. Seien $x=r\cos \varphi$, $y=r\sin \varphi$. Berechne
+    \[
+    \lim_{(x, y) \rightarrow (0,0)} f(x, y) = \lim_{r \rightarrow 0} f(x, y)
+    \]
+    Hängt das Resultat von $\varphi$ ab $\Rightarrow$ der Grenzwert existiert nicht $\Rightarrow$ nicht stetig an dieser Stelle.
+\end{Rezept}
+
+\begin{Rezept}{Linientrick}{}
+    Ziel: Stetigkeit widerlegen. Suche zwei Linien, die einen unterschiedlichen $\lim$ haben. Zeigt, dass ein $\lim$ nicht existieren kann.
+    Sei $f(x, y)=\frac{y}{x+1}$ und $\{(x, y) \in \mathbb{R} \mid x \neq 1\}$ für $(x, y) \rightarrow (-1, 0)$. Linie $\{(x, y) \in \mathbb{R} \mid y=0\cap x \neq 1\}=0$ und $\{(x, y) \in \mathbb{R} \mid y=x+1\}=1$.
+\end{Rezept}
+
+\begin{Rezept}{Stetigkeit prüfen}{}
+    Sei $f$ die zu prüfende Funktion. 1) $f$ muss überall definiert sein. 2) $\lim_{x \rightarrow a} f(x)$ existiert. 3) $\lim_{x \rightarrow a} f(x) = f(a)$.
+\end{Rezept}

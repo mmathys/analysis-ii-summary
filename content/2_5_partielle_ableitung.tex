@@ -1,0 +1,131 @@
+%TODO study partielle ableitung
+
+\subsection{Partielle Ableitung (Partial Derivative)}
+
+$f$: $\mathbb{R}^n \rightarrow \mathbb{R}$ an Stelle $a$ nach $x_i$
+
+\[
+    \lim_{h \rightarrow 0} \frac{f(a_1, ..., a_i + h, ..., a_n) - f(a_1, ..., a_i, ..., a_n)}{h} =: \frac{\partial f}{\partial x_i}(a)
+\]
+
+\textbf{Wichtig}: Alle anderen $x_i$ werden als konstante behandelt bei Ableitung.
+
+TODO: Check script + check vorlesungsnotizen
+
+TODO: regeln
+
+\subsubsection{Gradient}
+
+\[
+    \nabla f =
+        \begin{pmatrix}
+            \frac{\partial f}{\partial x_1}\\
+            \vdots\\
+            \frac{\partial f}{\partial x_n}
+        \end{pmatrix}
+\]
+
+Gradient eines Skalarfeldes: Richtung: Richtung des steilten Anstiegs; Betrag: Stärke des Anstiegs.\\
+
+\textbf{Regeln} ($n \in \mathbb{N}$, $c$ konstant, $u, v$ Vektoren):
+$\text{grad}(c) = 0$,
+$\text{grad}(c \cdot u) = c \cdot \text{grad}(u)$ (Linearität),
+$\text{grad}(u + v) = \text{grad}(u) + \text{grad}(u)$ (Addition),
+$\text{grad}(u \cdot v) = \text{grad}(u) \cdot \text{grad}(u)$
+(Produktregel),
+TODO andere gradienten regeln von der übungsstunde 5
+TODO Serie 5 2.1 senkrecht satz 
+$\text{grad}(u^n) = n \cdot u^{n-1} \cdot \text{grad}(u)$ ($n\neq 0$).\\
+
+
+\subsubsection{Richtungsableitung (Directional Derivative)}
+
+\textbf{Rezept Richtungsableitung $D_u f(a)$} für $f$ in Richtung $u$ in Punkt $a$: 1) $u$ normieren: $\tilde{u} = \frac{u}{||u||}$ 2) Gradient $\nabla f(x)$ berechnen.
+
+\[
+    D_u f(a) = \tilde{u} \cdot \nabla f(a)
+\]
+
+Existenz Directional derivative: skript prop 3.4.15
+
+\subsubsection{Hesse-Matrix (Hessian Matrix)}    
+
+\[
+    \text{Hess}(f) =
+        \begin{pmatrix}
+            \frac{\partial^2 f}{\partial x_1^2}&\hdots&\frac{\partial^2 f}{\partial x_1 x_n}\\
+            \vdots&\ddots&\vdots\\
+            \frac{\partial^2 f}{\partial x_n x_1}&\hdots&\frac{\partial^2 f}{\partial x_n^2}
+        \end{pmatrix}
+\]
+
+\textbf{Trick Definitheit 2x2 Hessematrix:}
+
+\[
+    H =
+        \begin{pmatrix}
+            a_{11} & a_{12}\\
+            a_{21} & a_{22}
+        \end{pmatrix}
+\]
+
+Falls symmetrisch und und $\text{det}(H) > 0$:
+
+$a_{11} > 0 \iff$ positiv definit;
+
+$a_{11} < 0 \iff$ negativ definit;
+
+sonst indefinit.
+
+\subsubsection{Satz von Schwarz (Higher derivatives)}
+
+$f \in C^2$. Gilt nur für zwei und drei verschiedene Variablen. Beliebige Potenzen von $x_i$ und $x_j$ möglich.
+
+\[
+    \frac{\partial^2 f}{\partial x_i x_j} = \frac{\partial^2 f}{\partial x_j x_i} \forall i, j \in \{1, ..., n\}
+\]
+
+\subsubsection{Jakobimatrix (Jacobian Matrix)}
+
+\[
+    f(x, y) =
+        \begin{pmatrix}
+            f_1(x, y)\\
+            \vdots\\
+            f_n(x, y)
+        \end{pmatrix}\ 
+    \text{J}_f(x, y) =
+        \begin{pmatrix}
+                \frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y}\\
+                \vdots&\vdots\\
+            \frac{\partial f_n}{\partial x} & \frac{\partial f_n}{\partial y}
+        \end{pmatrix}
+\]
+
+Chain rule für Jakobi Matrix: Prop. 3.4.9
+
+\subsection{Change of variable}
+
+Seien $x, y$ die alten Variablen und $u, v$ die neuen Variablen. Erstelle Abbildung $h:$ Neu $\to$ Alt, also $h: (u, v) \mapsto (x, y)$. Sei $f: (x, y) \to \mathbb{E}$, erstelle $g = f \circ h = h(f(x))$. $d (f \circ g) (x_0) = df(g(x_0)) \cdot dg(x_0)$
+
+Übungsstunde 5: CHANGE OF VARIABLE?.??.? skript 3.6 TODO THIS
+
+
+\subsection{Taylorpolynome}
+
+\[
+    f(x) = f(a) + f'(a)(x-a) + \frac{1}{2} f''(a)(x-a) + \frac{1}{3!} f^{(3)}(a)(x-a) + ...
+\]
+
+\textbf{Zwei Variablen}, $\Delta x = (x - x_0)$, ~ $\Delta y = (y - y_0)$
+
+\begin{tiny}
+\begin{align*}
+    \; & f(x, y) =f(x_0, y_0)\\ &+ \frac{\partial f}{\partial x} \Delta x + \frac{\partial f}{\partial y} \Delta y\\
+    &+ \frac{1}{2} \left(\frac{\partial^2 f}{\partial x^2} (\Delta x)^2 + 2\frac{\partial^2 f}{\partial x \partial y} \Delta x \Delta y + \frac{\partial^2 f}{\partial y^2} (\Delta y)^2\right)\\
+    &+ \frac{1}{3!} \left(\frac{\partial^3 f}{\partial x^3} (\Delta x)^3 + 3\frac{\partial^3 f}{\partial x^2 \partial y} (\Delta x)^2 \Delta y + 3\frac{\partial^3 f}{\partial x \partial y^2} \Delta x (\Delta y)^2 + \frac{\partial^3 f}{\partial y^3} (\Delta y)^3\right)\\
+    & + ...
+\end{align*}
+\end{tiny}
+
+\textbf{Rezept Tangentialebene}: Tangentialebene in $P=(x_0, y_0, f(x_0, y_0))^T$ = Taylorpolynom 1. Ordnung in $x_0, y_0$.

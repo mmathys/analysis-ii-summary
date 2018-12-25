@@ -1,0 +1,61 @@
+%TODO study implizite funktionen
+
+\subsection{Satz der Impliziten Funktion}
+
+theorem 3.10.4\\
+
+Ziel: Existenz von lokalen Umkehrungen. ''Implizit'', weil die Form der Gleichung stets ein Gleichungssystem impliziert. Form:
+
+\[
+    f(x, y) = 0
+\]
+
+$x = (x_1, ..., x_k)$, $y = (y_1, ..., y_l)$
+
+\begin{tiny}
+\[
+    df(x, y) =
+        \begin{pmatrix}
+            \frac{\partial f_1}{\partial x_1} & \hdots & \frac{\partial f_1}{\partial x_k}
+            & \frac{\partial f_1}{\partial y_1} & \hdots & \frac{\partial f_1}{\partial y_l}\\
+            
+            \vdots & \ddots & \vdots & \vdots & \ddots & \vdots\\
+            
+            \frac{\partial f_l}{\partial x_1} & \hdots & \frac{\partial f_l}{\partial x_k}
+            & \frac{\partial f_l}{\partial y_1} & \hdots & \frac{\partial f_l}{\partial y_l}\\
+        \end{pmatrix} \text{ wobei }
+    d_yf(x, y) =
+        \begin{pmatrix}
+            \frac{\partial f_1}{\partial y_1} & \hdots & \frac{\partial f_1}{\partial y_l}\\
+            
+            \vdots & \ddots & \vdots\\
+            
+            \frac{\partial f_l}{\partial y_1} & \hdots & \frac{\partial f_l}{\partial y_l}\\
+        \end{pmatrix}
+\]
+\end{tiny}
+
+\textbf{Satz} Sei $f: \mathbb{R}^k \times \mathbb{R}^l \to \mathbb{R}^l$ stetig differenzierbar. Falls ein Punkt $p_0 = (a, b)$ regulär und dass
+
+\[
+    f(p_0) = 0 \text{ und } \det(d_y f(p_0)) \neq 0\ (\iff d_y f(p_0) \text{ ist invertierbar})
+\]
+
+dann kann man lokal nach $b$ auflösen. Äquivalent: $\iff \exists h: f(x, h(x)) = 0$\\
+
+\textbf{Rezept: Ableitung der Auflösungsfunktion $h$:} Bsp 2-dimensional (auflösen nach $y$) oder 3-dimensional (auflösen nach $z$)
+
+\[
+    dh(x) = -\frac{d_x f(x, h(x))}{d_y f(x, h(x))}
+\]
+
+
+\[
+    \nabla h(x, y) =
+        \left(
+            -\frac{\partial_x f(x, y, h(x, y))}{\partial_z f(x, y, h(x, y))},
+            -\frac{\partial_y f(x, y, h(x, y))}{\partial_z f(x, y, h(x, y))}
+        \right)
+\]
+
+\textbf{Rezept: Typische Aufgabe} 1. $p_0$ bestimmen, sodass $f(x, y)=0$ stimmt. 2. $df(x, y)$ berechnen und $d_y$ kontrollieren, ob $\neq 0$ 3. Satz bewiesen, Ableiten der Auflösungsfunktion.

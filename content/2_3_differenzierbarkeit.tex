@@ -1,0 +1,50 @@
+%TODO study diffbarkeit
+
+\subsection{Differenzierbarkeit}
+
+\begin{Definition}{Differenzierbarkeit}{}
+    Sei $\Omega \subset \mathbb{R}$ offen, $f$ : $\Omega \to \mathbb{R}$, $x_0\in\Omega$. $f$ heisst \textbf{differenzierbar an Stelle $x_0$}, falls der Grenzwert
+    \[
+    \lim_{x\ to x_0} \frac{f(x) - f(x_0)}{x - x_0} =:
+    f'(x_0) =:
+    \frac{df}{dx}
+    \]
+    existiert. Wir nennen $f'(x_0)$ die Ableitung (das \textbf{Differential}) von $f$ an der Stelle $x_0$. Eine solche Funktion heisst dann \textbf{differenzierbar auf $\Omega$}, wenn sie an jeder Stelle $x_0 \in \Omega$ differenzierbar ist.
+\end{Definition}
+
+$f$ diffbar $\Leftrightarrow$ alle Teil-$f$ sind diffbar.
+
+$f,g$ diffbar $\Rightarrow$ $f+g$, $f \cdot g$, $\frac{f}{g}$, $g \circ f$ diffbar
+
+TODO: vielleicht nummern im skript zu chain rule usw?
+
+TODO: skript proposition 3.4.4
+
+TODO: regeln differenzierbarkeit: addition, multiplikation, division, verkettung (proposition 3.4.9)
+
+TODO: tangent space of $f$
+
+\begin{Definition}{Partielle Differenzierbarkeit}{}
+	
+\end{Definition}
+
+\textbf{Partielle Differenzierbarkeit}: $f$: $\mathbb{R}^n \rightarrow \mathbb{R}^m$, falls:
+
+\[
+    \lim_{h \rightarrow 0} \frac{f(x_0 + h e_i)-f(x_0)}{h} =: \frac{\partial f}{\partial x_i}(x_0)
+\]
+
+oder generell für alle $e_i$ zusammengefasst in Richtung $v \in \mathbb{R}^n$
+
+\[
+    \lim_{h \rightarrow 0} \frac{f(x_0 + h v)-f(x_0)}{h} =: D_v f(x_0)
+\]
+
+Dieser $\lim$ existiert $\Leftrightarrow$ in Richtung $e_i$ an Stelle $x_0$ partiell differenzierbar.\\
+
+\textbf{Totale Differenzierbarkeit}: TODO, hatten wir das im Skript: Ja: Def 3.4.2 und Prop. 3.4.4\\
+
+Prop. 3.4.7!
+
+\textbf{Tangent space}
+

@@ -10,9 +10,14 @@ $f$: $\mathbb{R}^n \rightarrow \mathbb{R}$ an Stelle $a$ nach $x_i$
 
 \textbf{Wichtig}: Alle anderen $x_i$ werden als konstante behandelt bei Ableitung.
 
-TODO: Check script + check vorlesungsnotizen
+\subsubsection{Satz von Schwarz (Higher derivatives)}
 
-TODO: regeln
+$f \in C^2$. Gilt nur für zwei und drei verschiedene Variablen. Beliebige Potenzen von $x_i$ und $x_j$ möglich.
+
+\[
+    \frac{\partial^2 f}{\partial x_i x_j} = \frac{\partial^2 f}{\partial x_j x_i} \forall i, j \in \{1, ..., n\}
+\]
+
 
 \subsubsection{Gradient}
 
@@ -35,19 +40,24 @@ $\text{grad}(u \cdot v) = \text{grad}(u) \cdot \text{grad}(u)$
 (Produktregel),
 TODO andere gradienten regeln von der übungsstunde 5
 TODO Serie 5 2.1 senkrecht satz 
-$\text{grad}(u^n) = n \cdot u^{n-1} \cdot \text{grad}(u)$ ($n\neq 0$).\\
-
+$\text{grad}(u^n) = n \cdot u^{n-1} \cdot \text{grad}(u)$ ($n\neq 0$).
 
 \subsubsection{Richtungsableitung (Directional Derivative)}
 
-\textbf{Rezept Richtungsableitung $D_u f(a)$} für $f$ in Richtung $u$ in Punkt $a$: 1) $u$ normieren: $\tilde{u} = \frac{u}{||u||}$ 2) Gradient $\nabla f(x)$ berechnen.
+$f$ heisst an der Stelle $a$ in Richtung $u$ differenzierbar, falls der Grenzwert 
+	\[
+		\lim_{h\to0}\frac{f(a + hu) -f(a)}{h} =
+		\left.\frac{d}{dh}f(a+hu)\right|_{h = 0}
+		=: D_vf(a)
+	\]
+existiert. Ist $||u|| = 1$ (normiert), heisst dieser Grenzwert Richtungsableitung.\\
+
+\textbf{Rezept Richtungsableitung $D_u f(a)$}: Falls $f$ in $a$ differenzierbar ist: Für $f$ in Richtung $u$ in Punkt $a$: 1) $u$ normieren: $\tilde{u} = \frac{u}{||u||}$ 2) Gradient $\nabla f(x)$ berechnen.
 
 \[
     D_u f(a) = \tilde{u} \cdot \nabla f(a)
 \]
-
-Existenz Directional derivative: skript prop 3.4.15
-
+	
 \subsubsection{Hesse-Matrix (Hessian Matrix)}    
 
 \[
@@ -77,13 +87,6 @@ $a_{11} < 0 \iff$ negativ definit;
 
 sonst indefinit.
 
-\subsubsection{Satz von Schwarz (Higher derivatives)}
-
-$f \in C^2$. Gilt nur für zwei und drei verschiedene Variablen. Beliebige Potenzen von $x_i$ und $x_j$ möglich.
-
-\[
-    \frac{\partial^2 f}{\partial x_i x_j} = \frac{\partial^2 f}{\partial x_j x_i} \forall i, j \in \{1, ..., n\}
-\]
 
 \subsubsection{Jakobimatrix (Jacobian Matrix)}
 
@@ -102,7 +105,7 @@ $f \in C^2$. Gilt nur für zwei und drei verschiedene Variablen. Beliebige Poten
         \end{pmatrix}
 \]
 
-Chain rule für Jakobi Matrix: Prop. 3.4.9
+Für Kettenregel von Jakobimatrizen siehe generelle Kettenregel.
 
 \subsection{Change of variable}
 

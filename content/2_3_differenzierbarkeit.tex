@@ -16,35 +16,39 @@ $f$ diffbar $\Leftrightarrow$ alle Teil-$f$ sind diffbar.
 
 $f,g$ diffbar $\Rightarrow$ $f+g$, $f \cdot g$, $\frac{f}{g}$, $g \circ f$ diffbar
 
-TODO: vielleicht nummern im skript zu chain rule usw?
+\begin{Satz}{Kettenregel}{}
+	Seien $X,Y \subset \R^n$ offen und $f: X \to Y$, $g: Y \to \R^p$ differenzierbar. Dann ist $g \circ f$ differenzierbar und die Ableitung ist \[d(g\circ f)(x_0) = dg(f(x_0))\circ df(x_0)\] und die Jakobi-Matrix ist \[J_{g\circ f}(x_0) = J_g(f(x_0))J_f(x_0)\]
+\end{Satz}
 
-TODO: skript proposition 3.4.4
-
-TODO: regeln differenzierbarkeit: addition, multiplikation, division, verkettung (proposition 3.4.9)
-
-TODO: tangent space of $f$
 
 \begin{Definition}{Partielle Differenzierbarkeit}{}
-	
+	$f$: $\mathbb{R}^n \rightarrow \mathbb{R}^m$, falls:
+
+	\[
+    	\lim_{h \rightarrow 0} \frac{f(x_0 + h e_i)-f(x_0)}{h} =: \frac{\partial f}{\partial x_i}(x_0)
+	\]
+
+	oder generell für alle Einheitsvektoren $e_i$ zusammengefasst in Richtung $v \in \mathbb{R}^n$
+
+	\[
+    	\lim_{h \rightarrow 0} \frac{f(x_0 + h v)-f(x_0)}{h} =: D_v f(x_0)
+	\]
+
+	Dieser $\lim$ existiert $\Leftrightarrow$ in Richtung $e_i$ an Stelle $x_0$ partiell differenzierbar.
 \end{Definition}
 
-\textbf{Partielle Differenzierbarkeit}: $f$: $\mathbb{R}^n \rightarrow \mathbb{R}^m$, falls:
-
-\[
-    \lim_{h \rightarrow 0} \frac{f(x_0 + h e_i)-f(x_0)}{h} =: \frac{\partial f}{\partial x_i}(x_0)
-\]
-
-oder generell für alle $e_i$ zusammengefasst in Richtung $v \in \mathbb{R}^n$
-
-\[
-    \lim_{h \rightarrow 0} \frac{f(x_0 + h v)-f(x_0)}{h} =: D_v f(x_0)
-\]
-
-Dieser $\lim$ existiert $\Leftrightarrow$ in Richtung $e_i$ an Stelle $x_0$ partiell differenzierbar.\\
-
-\textbf{Totale Differenzierbarkeit}: TODO, hatten wir das im Skript: Ja: Def 3.4.2 und Prop. 3.4.4\\
+\begin{Definition}{Totale Differenzierbarkeit}{}
+	Sei $f: \Omega \subset \R^m \to \R^n$. $f$ heisst differenzierbar an der Stelle $x_0 \in \Omega$, falls eine lineare Abbildung $A: \R^n \to \R^m$ existiert (also eine $m \times n$ Matrix), sodass \[\lim_{x \to x_0} \frac{|f(x) - f(x_0) - A(x - x_0)|}{|x - x_0|} = 0\] Dann heisst $df(x_0) := A$ das Differenzial von $f$ in Punkt $x_0$. \\
+	Diese Matrix $A = Df(x_0)$ ist gegeben durch
+	\[
+		\text{D}f(x_0) =
+        \begin{pmatrix}
+            \frac{\partial f_1}{\partial x_1}(x_0)&\hdots&\frac{\partial f_1}{\partial x_n}(x_0)\\
+            \vdots&\ddots&\vdots\\
+            \frac{\partial f_m}{\partial x_1}(x_0)&\hdots&\frac{\partial f_n}{\partial x_m}(x_0)
+        \end{pmatrix}
+    \]
+\end{Definition}
 
 Prop. 3.4.7!
-
-\textbf{Tangent space}
 

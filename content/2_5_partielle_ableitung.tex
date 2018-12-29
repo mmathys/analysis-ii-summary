@@ -52,7 +52,9 @@ $f$ heisst an der Stelle $a$ in Richtung $u$ differenzierbar, falls der Grenzwer
 	\]
 existiert. Ist $||u|| = 1$ (normiert), heisst dieser Grenzwert Richtungsableitung.\\
 
-\textbf{Rezept Richtungsableitung $D_u f(a)$}: Falls $f$ in $a$ differenzierbar ist: Für $f$ in Richtung $u$ in Punkt $a$: 1) $u$ normieren: $\tilde{u} = \frac{u}{||u||}$ 2) Gradient $\nabla f(x)$ berechnen.
+\textbf{Rezept Richtungsableitung $D_uf(a)$ existiert:} Falls $t \mapsto f(a + tu)$ differenzierbar ist bei $t=0$, dann existiert $D_uf(a)$.
+
+\textbf{Rezept Richtungsableitung $D_u f(a)$}: Falls $f$ in $a$ differenzierbar ist: Für $f$ in Richtung $u$ in Punkt $a$: 1) $u$ normieren: $\tilde{u} = \frac{u}{||u||}$ 2) Gradient $\nabla f(x)$ berechnen, dann:
 
 \[
     D_u f(a) = \tilde{u} \cdot \nabla f(a)

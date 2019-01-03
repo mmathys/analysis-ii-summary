@@ -89,6 +89,18 @@
 	\end{enumerate}
 \end{Rezept}
 
+\begin{Rezept}{Euler-Ansatz mit vielfachen/komplexen Nullstellen}{}
+    \begin{tabular}{c|c}
+         \textbf{Lösung für $\lambda$} & \textbf{Linearkombinationen um $y(x)$ zu finden}\\
+         $\alpha$ & $c_1 \cdot e^{\alpha x}$\\
+         $\alpha_1 = \alpha_2 = \ldots = \alpha_k$ & $c_1 \cdot e^{\alpha x} + x \cdot e^{\alpha x} + \ldots + c_k \cdot x^{k-1} \cdot e^{\alpha x}$\\
+         $\alpha + \beta i, \; \beta>0$ & $c_1 \cdot e^{\alpha x} \cdot \sin(\beta x)$\\
+         $\alpha + \beta i, \; \beta<0$ & $c_1 \cdot e^{\alpha x} \cdot \cos(\beta x)$\\
+         $\alpha_1 + \beta_1 i = \ldots = \alpha_k + \beta_k i \;\; \beta>0$ & $c_1 \cdot e^{\alpha x} \cdot \sin(\beta x) + \ldots + c_k \cdot x^{k-1} \cdot e^{\alpha x} \cdot \sin(\beta x)$\\
+         $\alpha_1 + \beta_1 i = \ldots = \alpha_k + \beta_k i \;\; \beta<0$ & $c_1 \cdot e^{\alpha x} \cdot \cos(\beta x) + \ldots + c_k \cdot x^{k-1} \cdot e^{\alpha x} \cdot \cos(\beta x)$\\
+    \end{tabular}
+\end{Rezept}
+
 \begin{Diverses}{}{}
 	Manchmal sind die Terme in $y(x) = Ae^{ix} + Be^{-ix}$ nicht die geeignetste Form und man möchte lieber reelle Funktionen. Dann nutzt man die Formel 
 	\[

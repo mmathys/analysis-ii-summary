@@ -225,6 +225,30 @@
 	\textbf{Bemerkung II:} Wenn ein Teil der für $y_p(x)$ zu wählende Funktion bereits in der Lösung des homogenen Problems vorhanden ist, wird der Ansatz zusätzlich mit $x$ multipliziert. Wenn z.B. die homogene Lösung die Form $y_h(x) = Ax + B$ hat, wählt man anstelle des Ansatzes $y_p(x) = ax+b \Rightarrow y_p(x) = x\cdot(ax+b)$.
 \end{Rezept}
 
+\begin{Rezept}{Inhomogene AWP}{}
+    Wie im Beispiel ($y' + y = 2\sin(x)$ mit $y(0)=0$) vorgehen:
+	\begin{enumerate}
+	    \item { Homogene Lösung finden: $(\lambda+1)(e^{\lambda x}) = 0 \Rightarrow \lambda = -1 \Rightarrow y_h = c_1 \cdot e^{-x}$ }
+	    \item { Gemäss Störfunktion den Ansatz für $y_p$ wählen und dessen
+            Ableitungen finden:
+            \begin{align*}
+              y_p & = c\cdot \sin(x) + d\cdot \cos(x)\\
+              y_p' & = c\cdot \cos(x) - d\cdot \sin(x) 
+            \end{align*}
+	        }
+	    \item { Dies in die ursprüngliche DGL einsetzen, um die Koeffizienten des Ansatzes und damit die partikuläre Lösung zu finden:
+	       \[ c \cdot \cos(x) - d\cdot \sin(x) + c\cdot \sin(x) + d\cdot \cos(x) \stackrel{!}{=} 2\sin(x)\] \[ \Leftrightarrow (c+d) \cos(x) + (c-d) \sin(x) \stackrel{!}{=} 2\sin(x) ~ \Longleftrightarrow ~ c=1,\;d=-1 \]
+	    }
+	    \item{
+	        Anfangswertbedingungen nutzen um $c_k$ aus der homogenen Lösung zu finden
+	        \[ y(0) = \underbrace{c_1 \cdot e^{-x}}_{y_h(0)} + \underbrace{\sin(x)-\cos(x)}_{y_p(0)} = c_1\cdot1 + 0 - 1 \stackrel{!}{=} 0 \Leftrightarrow c_1 = 1 \]
+	    }
+	    \item{
+	        \[ y(x) = 1 + sin(x) - cos(x) \] 
+	   }
+	\end{enumerate}
+\end{Rezept}
+
 %\subsection{Ordinary Differential Equations}
 
 %\subsection{Linear Differential Equations}

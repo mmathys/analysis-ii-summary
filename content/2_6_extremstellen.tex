@@ -61,7 +61,13 @@ critical point, eigenvalues of hesse matrix zusammenfahang (?)\\
 \end{Definition}
 
 \begin{Satz}{Sylvester-Kriterium}{}
-	TODO
+	\textbf{NUR FÜR GROSSE MATRIZEN VERWENDEN.}
+	Sind $A_1, ..., A_n$ die Hauptminoren der reellen, symmetrischen $n \times n$ Matrix A, dann gilt:
+	\begin{align*}
+		A \text{ ist positiv definit} &\iff \text{Alle }A_i > 0,\\
+		A \text{ ist negativ definit} &\iff \text{Wechselndes Vorzeichen: }A_1 < 0, A_2 > 0, A_3 < 0,...\\
+		A \text{ ist indefinit} &\iff \text{Weder alle }A_i \leq 0 \text{ noch }A_i \geq 0 
+	\end{align*}
 \end{Satz}
 
 \textbf{Rezept}: 1) Gradient berechnen 2) Gradient $=0$ setzen $\implies$ kritische Punkte. 3) Hessematrix berechnen 4) für jeden kritischen Punkt: Falls die Hessematrix positiv definit ist $\implies$ lokales Minimum; falls Hessematrix negativ definit ist $\implies$ lokales Maximum; sonst Sattelpunkt.\\

@@ -8,6 +8,56 @@ degenerate / non-degenerate critical point 3.8.6 (+INTUITION)\\
 
 critical point, eigenvalues of hesse matrix zusammenfahang (?)\\
 
+\begin{Definition}[label=R1]{Kritische und reguläre Punkte}{}
+	TODO
+\end{Definition}
+
+\begin{Satz}{Extremwerte in einer Variable}{}
+	Sei $f: \Omega \subset \R \to \R$, $f \in C^2$ und $x_0 \in \Omega$ ein kritischer Punkt (d. h. $f'(x_0) = 0$), dann gilt
+	\begin{itemize}
+		\item $x_0$ ist ein Minimum, falls $f''(x_0) > 0$,
+		\item $x_0$ ist ein Maximum, falls $f''(x_0) < 0$,
+		\item $x_0$ ist ein Sattelpunkt, falls $f''(x_0) = 0$
+	\end{itemize}
+\end{Satz}
+
+\begin{Satz}{Eigenwert-Kriterium}{}
+	
+\end{Satz}
+
+\begin{Definition}{Hauptminoren}{}
+	Die Hauptminor einer symmetrischen, reellen Matrix $A$ sind die nordwestlichen Unterdeterminanten der Matrix $A$. Sie werden mit $A_i$ bezeichnet, wobei $i$ die Grösse der Teilmatrix $A_i$ ist. 
+	
+	Sei die Matrix
+	\[
+		A = \begin{pmatrix}
+            a_{11} & a_{12} & \hdots & a_{1n}\\
+            a_{21} & a_{22} & \hdots & a_{2n}\\
+            \vdots & \vdots & \ddots & \vdots\\
+            a_{n1} & a_{n2} & \hdots & a_{nn}
+        \end{pmatrix}
+	\]
+	dann sind die $n$ Hauptminoren $A_1, ..., A_n$ gegeben durch
+	\begin{align*}
+		A_1 &= \det(a_{11}) = a_{11},\\
+		A_2 &= \det\begin{pmatrix}
+            a_{11} & a_{12} \\
+            a_{21} & a_{22}
+            \end{pmatrix},\\
+       	A_3 &= \det\begin{pmatrix}
+            a_{11} & a_{12} & a_{13} \\
+            a_{21} & a_{22}& a_{23}\\
+            a_{31} & a_{32}& a_{33}
+            \end{pmatrix},\\
+            &\vdots\\
+        A_n &= \det(A)
+    \end{align*}
+\end{Definition}
+
+\begin{Satz}{Sylvester-Kriterium}{}
+	
+\end{Satz}
+
 \textbf{Rezept}: 1) Gradient berechnen 2) Gradient $=0$ setzen $\implies$ kritische Punkte. 3) Hessematrix berechnen 4) für jeden kritischen Punkt: Falls die Hessematrix positiv definit ist $\implies$ lokales Minimum; falls Hessematrix negativ definit ist $\implies$ lokales Maximum; sonst Sattelpunkt.\\
 
 \textbf{Rezept für abgegrenzte Skalarfelder}: 1) Skalarfeld nach kritischen Punkten untersuchen 2) Alle Begrenzungen des Skalarfelder einzeln nach kritischen Punkten berechnen. Beispiel Dreieck: alle Seiten parametrisieren und alle Eckpunkte untersuchen.

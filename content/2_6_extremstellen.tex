@@ -22,7 +22,13 @@ critical point, eigenvalues of hesse matrix zusammenfahang (?)\\
 \end{Satz}
 
 \begin{Satz}{Eigenwert-Kriterium}{}
-	
+	Seien $\lambda_1, ..., \lambda_n$ die Eigenwerte einer reellen, symmetrischen $n \times n$ Matrix $A$. Dann gilt
+	\begin{align*}
+		A \text{ ist positiv definit} &\iff \text{Alle }\lambda_i > 0,\\
+		A \text{ ist positiv semi-definit} &\iff \text{Alle }\lambda_i \geq 0,\\
+		A \text{ ist negativ definit} &\iff \text{Alle }\lambda_i < 0,\\
+		A \text{ ist negativ semi-definit} &\iff \text{Alle }\lambda_i \leq 0
+	\end{align*}
 \end{Satz}
 
 \begin{Definition}{Hauptminoren}{}
@@ -55,7 +61,7 @@ critical point, eigenvalues of hesse matrix zusammenfahang (?)\\
 \end{Definition}
 
 \begin{Satz}{Sylvester-Kriterium}{}
-	
+	TODO
 \end{Satz}
 
 \textbf{Rezept}: 1) Gradient berechnen 2) Gradient $=0$ setzen $\implies$ kritische Punkte. 3) Hessematrix berechnen 4) für jeden kritischen Punkt: Falls die Hessematrix positiv definit ist $\implies$ lokales Minimum; falls Hessematrix negativ definit ist $\implies$ lokales Maximum; sonst Sattelpunkt.\\

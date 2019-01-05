@@ -3,7 +3,7 @@
 \subsection{Extremstellen (Kritische Punkte)}
 
 \begin{Definition}[label=R1]{Kritische und reguläre Punkte}{}
-	\textbf{Fall $f: \R^n \to \R$}: Sei 	$f: \Omega \subset \R^n \to \R$ differenzierbar. Ein Punkt $p_0 \in \Omega$ heisst \textbf{kritischer Punkt von $f$}, falls $df(x_0)=0$. Ist der Punkt nicht kritisch, heisst er \textbf{regulär}.\\
+	\textbf{Fall $f: \R^n \to \R$}: Sei 	$f: \Omega \subset \R^n \to \R$ differenzierbar. Ein Punkt $p_0 \in \Omega$ heisst \textbf{kritischer Punkt von $f$}, falls $df(p_0)=0$. Ist der Punkt nicht kritisch, heisst er \textbf{regulär}.\\
 	
 	\textbf{Fall $f: \R^n \to \R^m$}: Sei $f: \Omega \subset \R^n \to \R^m$ differenzierbar. Wir wissen, dass $df(x_0)$ eine lineare Abbildung ist. Diese lässt sich mit einer $m\times n$-Matrix darstellen. Der \textbf{Rang} der Matrix beschreibt die Dimension des Bildes. Für eine $m \times n$ Matrix $A$ gilt \[\text{Rang}(A) \leq \min(m, n)\] Ein Punkt $p_0 \in \Omega$ heisst \textbf{regulär}, wenn die Matrix $df(x_0)$ einen maximalen Rang besitzt. Sonst heisst $p_0$ kritisch.
 	
@@ -72,9 +72,19 @@
 	\end{align*}
 \end{Satz}
 
-\textbf{Rezept}: 1) Gradient berechnen 2) Gradient $=0$ setzen $\implies$ kritische Punkte. 3) Hessematrix berechnen 4) für jeden kritischen Punkt: Falls die Hessematrix positiv definit ist $\implies$ lokales Minimum; falls Hessematrix negativ definit ist $\implies$ lokales Maximum; sonst Sattelpunkt.\\
+\begin{Rezept}[label=Skalar1]{Kritische Punkte finden in Skalarfeld (im Inneren, nicht abgegrenzt)}{}
+	\textbf{Lösungsschritt I:} Gradient berechnen; Gradient $=0$ setzen $\implies$ kritische Punkte.
+	
+	\textbf{Lösungsschritt II:} Hessematrix berechnen; für jeden kritischen Punkt: Falls die Hessematrix positiv definit ist $\implies$ lokales Minimum; falls Hessematrix negativ definit ist $\implies$ lokales Maximum; sonst Sattelpunkt.
+\end{Rezept}
 
-\textbf{Rezept für abgegrenzte Skalarfelder}: 1) Skalarfeld nach kritischen Punkten untersuchen 2) Alle Begrenzungen des Skalarfelder einzeln nach kritischen Punkten berechnen. Beispiel Dreieck: alle Seiten parametrisieren und alle Eckpunkte untersuchen.
+\begin{Rezept}[label=Skalar2]{Kritische Punkte finden in Skalarfeld (abgegrenzt)}{}
+	\textbf{Lösungsschritt I:} Inneres Skalarfeld nach kritischen Punkten untersuchen nach Rezept \ref{Skalar1}.
+	
+	\textbf{Lösungsschritt II:} Alle Begrenzungen des Skalarfeldes einzeln nach kritischen Punkten untersuchen. Beispiel Dreieck: alle Seiten parametrisieren und alle Eckpunkte untersuchen. Parametrisierungen ableiten und die Extrempunkte der Stücke untersuchen; Eckpunkte notieren.
+	
+	\textbf{Lösungsschritt III:} Alle gefundenen Punkte miteinander vergleichen und herausfinden, welches die Extrema sind (jeweils die Funktionswerte der Extrempunkte berechnen).
+\end{Rezept}
 
 \begin{Rezept}[label=R1]{Extremwertaufgaben ohne Nebenbedingungen}{}
 	Gegeben: $f:\Omega\subset \mathbb{R}^n \to \mathbb{R}$ mit $\Omega$ offen (d.h. ohne Rand) und $f$ von der Klasse $C^2$.\\
@@ -121,40 +131,4 @@
 	Ist der Rand stückweise parametrisiert durch $\gamma_1,\gamma_2,\dots$, muss die Funktion zusätzlich an allen Anfangs- und Endpunkten der $\gamma_i$  explizit ausgewertet werden.\\
 	\newline
 	\textit{Bemerkung: Das Wort "'einfach"' bedeutet hier, dass wir eine Parametrisierung für den Rand finden können.}
-\end{Rezept}
-
-\begin{Rezept}{Extremwertaufgaben mit Nebenbedingungen}{}
-	Gegeben: $f:\Omega\subset \R^n \to \R$ und $g:\Omega \to \R^l$ der Klasse $C^1$.\\
-	Gesucht: ein Extremum der Funktion $f$ unter der Nebenbedingung $g=0$.\\
-	\newline
-	\textbf{Lösungsschritt I:}\\
-	Bilde die Lagrange-Funktion
-	\begin{equation*}
-	L(x_1,\dots,x_n,\lambda) = f(x_1,\dots,x_n) - \lambda_1 g_1(x_1,\dots,x_n) - \dots - \lambda_l g_l(x_1,\dots,x_n),
-	\end{equation*}
-	wobei $g_1,\dots,g_l$ die $l$ Komponenten von $g$ sind. Oft ist $l=1$.\\
-	\newline
-	\textbf{Lösungsschritt II:}\\
-	Bestimme die kriischen Punkte von L, d.h. löse
-	\begin{align*}
-	\pdv{L}{x_1} &= \pdv{f}{x_1}-\lambda_1\pdv{g_1}{x_1} - \dots -\lambda_l\pdv{g_l}{x_1} = 0\\
-	\vdots\\
-	\pdv{L}{x_n} &= \pdv{f}{x_n}-\lambda_1\pdv{g_1}{x_n} - \dots -\lambda_l\pdv{g_l}{x_n} = 0.
-	\end{align*}
-	
-	Löse dieses Gleichungssystem mit den zusätzlichen Gleichungen von $g=0$.\\
-	\newline
-	\textbf{Lösungsschritt III:}\\
-	Die Lösungen $(x_1,\dots,x_n)$ sind die Kandidaten für Extremalstellen von $f$. Untersuche die Hesse-Matrix von L um den Typ zu bestimmen.
-	\begin{align*}
-	\text{Hess}(L)(x_0,\lambda)\text{ ist positiv definit} \quad &\rightarrow  \quad 
-	x_0 \text{ ist ein lokales Minimum von } f \text{ auf } g^{-1}(0),\\
-	\text{Hess}(L)(x_0,\lambda)\text{ ist negativ definit} \quad &\rightarrow  \quad x_0 \text{ ist ein lokales Maximum von } f \text{ auf } g^{-1}(0),\\
-	\text{Hess}(L)(x_0,\lambda)\text{ ist indefinit} \quad &\rightarrow  \quad x_0 \text{ ist ein Sattelpunkt von } f \text{ auf } g^{-1}(0).
-	\end{align*}
-	
-	Ist man nur an den \textbf{globalen Extremwerten} interessiert, spart man sich diesen Schritt und wertet stattdessen die Funktion $f$ an den Kandidaten aus.\\
-	\newline
-	\textbf{Lösungsschritt IV:}\\
-	Ist man auch an Extremalstellen im Innern $\overset{\circ}{\Omega}$ interessiert, sucht man diese mit dem bereits bekannten Rezept.
 \end{Rezept}

@@ -1,24 +1,6 @@
 \section{Integration in $\mathbb{R}^d$}
 
-\subsection{Konservative Vektorfelder}
-Ein Vektorfeld $V: (x, y) \mapsto (f_1(x), f_2(y))$ ist konservativ, wenn es überall definiert
-und zusammenhängend (für 2D: keine 'Löcher') ist und gilt, dass $rot \;V = 0$. Es müssen also gleich sein:\\ 
-Für $\mathbb{R}^2$:
-\[ \frac{\partial f_1}{\partial x_2} = \frac{\partial f_2}{\partial x_1} \]
-Für $\mathbb{R}^3$:
-\[ \frac{\partial f_1}{\partial x_2} =  \frac{\partial f_2}{\partial x_1}, 
-~~  \frac{\partial f_1}{\partial x_3} = \frac{\partial f_3}{\partial x_1},
-~~ \frac{\partial f_2}{\partial x_3} =  \frac{\partial f_3}{\partial x_2}
-\]
-
-
-\subsection{Potential}
-
-Intuition: Stärke der Änderung der Richtung der Vektoren in einem Vektorfeld.
-
-
-
-\subsection{Linienintegrale}
+\subsection{Wegintegrale}
 
 Sei $f: [a, b] \rightarrow \mathbb{R}^{n}$ stetig, d.h. für
 \[ f(t) = (f_1(t), ~ \ldots, ~ f_n(t)) \]
@@ -34,18 +16,92 @@ $\gamma ~ | ~ ]t_i, t_{i-1}[ ~ \in C^1$}
 \end{enumerate}
 nennen wir $\gamma$ einen Pfad zwischen
 $\gamma(a)$ und $\gamma(b)$. 
-Das \textbf{Linienintegral von $f$ entlang $\gamma$} ist definiert als
-\[ \int_{\gamma} f(s)\cdot d\vec{s} = 
-	\int_a^b \underbrace{\underbrace{f(\gamma(t))}_{\in\mathbb{R}^n}  \cdot 
-	\underbrace{\gamma'(t)}_{\in\mathbb{R}^n}}_{\text{Skalarprodukt in } \mathbb{R}} dt  ~
-	\in \mathbb{R} \]
-und ist unabhängig der gewählten Parametrisierung!
 
+\begin{Satz}{Länge einer Kurve}{}
+	Sei $\gamma$ eine reguläre Kurve $t \to \gamma(t)$ sei $|.|$ die euklidische Norm: Die Länge ist
+	\[
+  		L(\gamma) = \int_a^b |\gamma'| dt
+  	\]
+\end{Satz}
 
+\begin{Rezept}{Wegintegrale}{}
+	Gegeben: Vektorfeld f von der Klasse $C^1$ und eine Kurve $\gamma \in C^1_{pw}$.
+	
+	Gesucht: Wegintegral $\int_\gamma f \cdot ds$.\\
+	
+	\textbf{Lösungsschritt I:}
+	
+	Parametrisiere $\gamma$, d.h. finde eine Abbildung $\gamma(t) : [a, b] \to \R^n$, $t \to \gamma(t)$.
+	
+	\textbf{Lösungsschritt II:}
+	
+	Berechne $\gamma'(t) = \frac{d}{dt} \gamma(t)$. Dabei wird jede Komponente des Vektors $\gamma$ einzeln nach t abgeleitet.
+	
+	\textbf{Lösungsschritt III:}
+	
+	Das Wegintegral von $f$ entlang $\gamma$ ist definiert als
+	\[
+		\int_{\gamma} f(s)\cdot d\vec{s} = 
+		\int_a^b \underbrace{\underbrace{f(\gamma(t))}_{\in\mathbb{R}^n}  \cdot 
+		\underbrace{\gamma'(t)}_{\in\mathbb{R}^n}}_{\text{Skalarprodukt in } \mathbb{R}} dt  ~
+		\in \mathbb{R}
+	\]
+	und ist unabhängig der gewählten Parametrisierung!
+\end{Rezept}
+
+\subsection{Potential}
+
+Intuition: Stärke der Änderung der Richtung der Vektoren in einem Vektorfeld.
+
+\begin{Definition}{Potentialfelder und Potentiale}{}
+	Ein Vektorfeld $\vec{v} : \Omega \subset \R^n \to \R^n$ heisst \textbf{Potentialfeld}, falls eine stetig differenzierbare Abbildung $\Phi : \Omega \subset \R^n \to \R$ existiert, sodass \[\vec{v} = \nabla \Phi\] gilt. Das skalare Feld $\Phi$ heisst dann \textbf{Potential} von $\vec{v}$. \textbf{Wichtig:} Es gibt sehr viele Vektorfelder, die sich nicht als Gradient eines skalaren Feldes schreiben lassen (also keine Potentialfelder sind)!
+\end{Definition}
+
+\subsection{Konservative Vektorfelder (= Potentialfelder)}
+Ein Vektorfeld $V: (x, y) \mapsto (f_1(x), f_2(y))$ ist konservativ (= ein Potentialfeld) wenn es überall definiert
+und zusammenhängend (für 2D: keine 'Löcher') ist und gilt, dass $rot \;V = 0$. Es gelten die \textbf{Integrabilitätsbedingungen} \\ 
+Für $\mathbb{R}^2$:
+\[ \frac{\partial f_1}{\partial x_2} = \frac{\partial f_2}{\partial x_1} \]
+Für $\mathbb{R}^3$:
+\[ \frac{\partial f_1}{\partial x_2} =  \frac{\partial f_2}{\partial x_1}, 
+~~  \frac{\partial f_1}{\partial x_3} = \frac{\partial f_3}{\partial x_1},
+~~ \frac{\partial f_2}{\partial x_3} =  \frac{\partial f_3}{\partial x_2}
+\]
+Für $\mathbb{R}^n$:
+\[
+	\frac{\partial f_i}{\partial x_j} =  \frac{\partial f_j}{\partial x_i},
+	\quad
+	\forall i \neq j,
+	\quad
+	i, j \in \{1,...,n\}
+\]
+
+\begin{Satz}{Wegintegrale für Potentialfelder}{}
+	Sei $\vec{v} : \Omega \subset \R^n \to \R^n$ ein Potentialfeld mit Potential $\Phi$. Dann gilt für jedes Wegintegrale entlang $\gamma$, dass
+	\[
+		\int_\gamma \vec{v} \cdot d\vec{s} = 
+		\int_a^b \vec{v}(\gamma(t)) \cdot \gamma'(t) dt =
+		\Phi(\gamma(b)) - \Phi(\gamma(a))
+	\]
+	Wir müssen also nur die Potentiale am Anfangs- und Endpunkt der Kurve auswerten! Damit sieht man auch gerade, dass für jede geschlossene Kurve das Wegintegrale eines Potentialfeldes gleich 0 ist. 
+\end{Satz}
+
+\begin{Diverses}{Zusammenfassung}{}
+	Sei $\vec{v} : \Omega \subset \R^n \to \R^n$ ein stetig differenzierbares Vektorfeld und $\Omega$ einfach zusammenhängend. Folgende Aussagen sind äquivalent:
+	\begin{itemize}
+		\item $\vec{v}$ ist konservatives Vektorfeld
+		\item $\vec{v}$ ist ein Potentialfeld
+		\item Für alle geschlossene Kurven gilt $\oint \vec{v} \cdot d\vec{s} = 0$
+		\item Das Integral $\int_\gamma \vec{v} \cdot d\vec{s}$ ist unabhängig vom Weg
+		\item $\vec{v}$ erfüllt die Integrabilitätsbedingung auf $\Omega$. Für $\R^3$ gilt also $\nabla \times \vec{v} = 0$
+	\end{itemize}
+\end{Diverses}
 \subsection{Sternförmig?}
+
+% TODO star shaped
 Zügs zu Star shaped?
 
-
+\subsection{Integrationsregeln}
 
 \begin{Satz}{Satz von Fubini}{}
     Reduzierung von mehrdimensionalen Integralen auf eine Dimension. Sei $f: [a,b] \times [c, d]$ stetig, dann gilt

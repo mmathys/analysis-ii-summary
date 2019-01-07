@@ -143,7 +143,8 @@ Seien $x, y$ die alten Variablen und $u, v$ die neuen Variablen. Erstelle Abbild
     Tangentialebene der Fläche $f(x, y)$ finden in Punkt $(x_0, y_0)$.
     
     \textbf{Lösungsschritt I:}
-    Erstelle $F(x, y) = (x, y, f(x, y))^\top$ und berechne
+    Erstelle $F(x, y) = (x, y, f(x, y))^\top$ und berechne die
+    Basisvektoren für die Tangentialebene
     \[
         dF(x_0, y_0) =
             \begin{pmatrix}
@@ -191,7 +192,7 @@ Seien $x, y$ die alten Variablen und $u, v$ die neuen Variablen. Erstelle Abbild
 \end{Rezept}
 
 \begin{Rezept}{Tangentialebene (Variante II)}{}
-\textbf{Idee}: Annäherung von f im Punkt $(x_0, y_0)$ durch Taylorpolynom I. Grades
+\textbf{Idee}: Annäherung von $f$ im Punkt $(x_0, y_0)$ durch Taylorpolynom I. Grades
 \[ z = f(x_0, y_0) + \frac{\partial f}{\partial x}(x_0, y_0)\cdot(x-x_0) + \frac{\partial f}{\partial y}(x_0, y_0)\cdot(y-y_0) \]
 kann direkt umgeformt werden in die Normalform der Ebenengleichung.
 \end{Rezept}

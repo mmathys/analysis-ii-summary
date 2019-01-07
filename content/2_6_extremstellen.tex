@@ -3,9 +3,13 @@
 \begin{Definition}[label=R1]{Kritische und reguläre Punkte}{}
 	\textbf{Fall $f: \R^n \to \R$}: Sei 	$f: \Omega \subset \R^n \to \R$ differenzierbar. Ein Punkt $p_0 \in \Omega$ heisst \textbf{kritischer Punkt von $f$}, falls $df(p_0)=0$. Ist der Punkt nicht kritisch, heisst er \textbf{regulär}.\\
 	
-	\textbf{Fall $f: \R^n \to \R^m$}: Sei $f: \Omega \subset \R^n \to \R^m$ differenzierbar. Wir wissen, dass $df(x_0)$ eine lineare Abbildung ist. Diese lässt sich mit einer $m\times n$-Matrix darstellen. Der \textbf{Rang} der Matrix beschreibt die Dimension des Bildes. Für eine $m \times n$ Matrix $A$ gilt \[\text{Rang}(A) \leq \min(m, n)\] Ein Punkt $p_0 \in \Omega$ heisst \textbf{regulär}, wenn die Matrix $df(x_0)$ einen maximalen Rang besitzt. Sonst heisst $p_0$ kritisch.
-	
-	Ein kritischer Punkt heisst \textbf{degeneriert}, wenn an dieser Stelle die Hesse-Matrix nicht-singulär ist: \[\det(H_f(p_0)) \neq 0\] gilt. Ansonsten heisst der Punkt \textbf{nicht-degeneriert}.
+	\textbf{Fall $f: \R^n \to \R^m$}: Sei $f: \Omega \subset \R^n \to \R^m$ differenzierbar. Wir wissen, dass $df(x_0)$ eine lineare Abbildung ist.
+	Diese lässt sich mit einer $m\times n$-Matrix darstellen. Der \textbf{Rang} der Matrix beschreibt die Dimension des Bildes.
+	Für eine $m \times n$ Matrix $A$ gilt \[\text{Rang}(A) \leq \min(m, n)\] Ein Punkt $p_0 \in \Omega$ heisst \textbf{regulär},
+	wenn die Matrix $df(x_0)$ einen maximalen Rang besitzt. Sonst heisst $p_0$ kritisch.
+	Ein kritischer Punkt heisst \textbf{degeneriert}, wenn an dieser Stelle für die Hesse-Matrix gilt:
+	\[\det(H_f(p_0)) \neq 0\]
+	Ansonsten heisst der Punkt \textbf{nicht-degeneriert}.
 \end{Definition}
 
 \begin{Satz}{Lokale Extrema (Corollary 3.8.7)}{}

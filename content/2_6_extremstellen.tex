@@ -34,6 +34,35 @@ deshalb, $f$ besitzt einen \textbf{Sattelpunkt} an $x_0$.
 	Charakteristisches Polynom mittels $\det (A-\lambda I)$ berechnen. Nullstellen des Polynoms sind die Eigenwerte.
 \end{Rezept}
 
+\begin{Satz}{Definitheit für symmetrische Hesse-Matrizen (Remark 3.8.8)}{}
+\begin{center}Für eine \textbf{symmetrische} Matrix gilt\end{center}
+\begin{multicols}{2}
+\[ A = \begin{pmatrix}
+         a & b\\
+         b & d
+       \end{pmatrix} \]
+\begin{align*}
+\textbf{positiv definit} & \Longleftrightarrow a > 0, ~~ ad-b^2>0\\
+\textbf{negativ definit} & \Longleftrightarrow a < 0, ~~ ad-b^2>0\\
+\textbf{indefinit} & \Longleftrightarrow ad-b^2 < 0
+\end{align*}
+
+
+\[ A = \begin{pmatrix}
+         a & b & c\\
+         b & e & f\\
+         c & f & i\\
+       \end{pmatrix} \]
+\begin{align*}
+\textbf{positiv definit} & \Longleftrightarrow a > 0, ~~ ae-b^2>0, ~~ \det \; A > 0\\
+\end{align*}
+
+
+\end{multicols}
+
+
+\end{Satz}
+
 \begin{Satz}{Eigenwert-Kriterium}{}
 	Seien $\lambda_1, ..., \lambda_n$ die Eigenwerte einer reellen, symmetrischen $n \times n$ Matrix $A$. Dann gilt
 	\begin{align*}

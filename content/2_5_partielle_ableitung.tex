@@ -61,18 +61,9 @@ Falls $f$ in $a$ differenzierbar ist: Für $f$ in Richtung $u$ in Punkt $a$: 1) 
 \]
 \end{Rezept}
 	
-\subsubsection{Hesse-Matrix (Hessian Matrix)}    
 
-\[
-    \text{Hess}(f) =
-        \begin{pmatrix}
-            \frac{\partial^2 f}{\partial x_1^2}&\hdots&\frac{\partial^2 f}{\partial x_1 x_n}\\
-            \vdots&\ddots&\vdots\\
-            \frac{\partial^2 f}{\partial x_n x_1}&\hdots&\frac{\partial^2 f}{\partial x_n^2}
-        \end{pmatrix}
-\]
 
-\textbf{Trick Definitheit 2x2 Hessematrix:}
+\begin{Rezept}{Trick Definitheit $2\times 2$ Hessematrix}{}
 
 \[
     H =
@@ -89,10 +80,21 @@ $a_{11} > 0 \iff$ positiv definit;
 $a_{11} < 0 \iff$ negativ definit;
 
 sonst indefinit.
+\end{Rezept}
 
 
-\subsubsection{Jakobimatrix (Jacobian Matrix)}
+\begin{Definition}{Hessematrix}{}
+\[
+    \mathbf{Hess}(f) =
+        \begin{pmatrix}
+            \frac{\partial^2 f}{\partial x_1^2}&\hdots&\frac{\partial^2 f}{\partial x_1 x_n}\\
+            \vdots&\ddots&\vdots\\
+            \frac{\partial^2 f}{\partial x_n x_1}&\hdots&\frac{\partial^2 f}{\partial x_n^2}
+        \end{pmatrix}
+\]
+\end{Definition}
 
+\begin{Definition}{Jakobimatrix}{}
 \[
     f(x, y) =
         \begin{pmatrix}
@@ -100,15 +102,15 @@ sonst indefinit.
             \vdots\\
             f_n(x, y)
         \end{pmatrix}\ 
-    \text{J}_f(x, y) =
+    \mathbf{J_f}(x, y) =
         \begin{pmatrix}
                 \frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y}\\
                 \vdots&\vdots\\
             \frac{\partial f_n}{\partial x} & \frac{\partial f_n}{\partial y}
         \end{pmatrix}
 \]
-
-Für Kettenregel von Jakobimatrizen siehe generelle Kettenregel.
+Für die Kettenregel von Jakobimatrizen siehe ''generelle Kettenregel''.
+\end{Definition}
 
 \subsection{Change of variable}
 

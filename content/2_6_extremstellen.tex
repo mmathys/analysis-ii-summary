@@ -8,6 +8,19 @@
 	Ein kritischer Punkt heisst \textbf{degeneriert}, wenn an dieser Stelle die Hesse-Matrix nicht-singulär ist: \[\det(H_f(p_0))=0\] gilt. Ansonsten heisst der Punkt \textbf{nicht-degeneriert}.
 \end{Definition}
 
+\begin{Satz}{Lokale Extrema (Corollary 3.8.7)}{}
+Sei $X\subset \mathbb{R}^n$ offen und $f: X \rightarrow \mathbb{R} \in C^2$. ~~
+Sei $x_0$ ein nicht-degenerierender kritischer Punkt von $f$. Sei $p$ und $q$
+die Anzahl der positiven resp. negativen Eigenwerte von $\mathbf{Hess_f}(x_0)$.
+
+\begin{enumerate}
+\item Falls $p=n$, bzw. äquiv. $q=0$, besitzt $f$ ein lokales Minimum an $x_0$
+\item Falls $q=n$, bzw. äquiv. $p=0$, besitzt $f$ ein lokales Maximum an $x_0$
+\item Ansonsten, bzw. äquiv. $pq\neq 0$ besitzt $f$ kein Extremum an $x_0$. Man sagt
+deshalb, $f$ besitzt einen \textbf{Sattelpunkt} an $x_0$.
+\end{enumerate}
+\end{Satz}
+
 \begin{Satz}{Extremwerte in einer Variable}{}
 	Sei $f: \Omega \subset \R \to \R$, $f \in C^2$ und $x_0 \in \Omega$ ein kritischer Punkt (d. h. $f'(x_0) = 0$), dann gilt
 	\begin{itemize}

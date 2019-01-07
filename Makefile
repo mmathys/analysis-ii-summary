@@ -3,7 +3,8 @@ all: draft
 
 cols:
 	mkdir -p out
-	pdflatex -interaction=nonstopmode -output-directory=out/ cols.tex
+	pdflatex -interaction=nonstopmode -output-directory=/tmp draft.tex
+	pdfnup -o out/cols.pdf /tmp/draft.pdf
 	mv out/cols.pdf .
 
 draft:

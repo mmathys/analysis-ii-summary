@@ -53,13 +53,13 @@ Das innere Integral wird zuerst ausgewertet.
     \[
         \vek{x_1}{\vdots}{x_n}
         = \Phi(u)
-        = \vek{g_1(u_1,\hdots,u_n}{\vdots}{g_n(u_1,\hdots,u_n)}
+        = \vek{g_1(u_1,\hdots,u_n)}{\vdots}{g_n(u_1,\hdots,u_n)}
     \]
     ist ein $C^1$-Diffeomorphismus. Dann gilt
     \[
-        \int_\Omega f(x_1, \hdots, x_n)dx_1\hdots dx_1 = \int_{\widetilde{\Omega}} f(g_1(u), \hdots, g_n(u))|\det d \Phi | du_1\hdots du_n
+        \int_\Omega f(x_1, \hdots, x_n)dx_1\hdots dx_1 = \int_{\widetilde{\Omega}} f(g_1(u), \hdots, g_n(u)) \cdot |\det d \Phi|\ du_1\hdots du_n
     \]
-    wobei das Gebiet $\widetilde{\Omega} = \Phi^{-1}(\Omega)$ ist. $|det d\Phi|$ ist die \textbf{Funktionaldeterminante}.
+    wobei das Gebiet $\widetilde{\Omega} = \Phi^{-1}(\Omega)$ ist. $|\det d\Phi|$ ist die \textbf{Funktionaldeterminante} (Jakobi-Determinante).
 \end{Satz}
 
 \begin{Rechenregeln}{Wichtige Koordinatentransformationen und Funktionaldeterminanten}{}

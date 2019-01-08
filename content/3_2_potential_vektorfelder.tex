@@ -14,8 +14,10 @@ Intuition: Stärke der Änderung der Richtung der Vektoren in einem Vektorfeld.
 \end{Rezept}
 
 \subsection{Konservative Vektorfelder (= Potentialfelder)}
-Ein Vektorfeld $V: (x, y) \mapsto (f_1(x), f_2(y))$ ist konservativ (= ein Potentialfeld) wenn es überall definiert
-und zusammenhängend (für 2D: keine 'Löcher') ist und gilt, dass $rot \;V = 0$. Es gelten die \textbf{Integrabilitätsbedingungen} \\ 
+\begin{Rezept}{Konservativität zeigen (mittels Integrabilitätsbedingungen)}{}
+Ein Vektorfeld $V: (x, y) \mapsto (f_1(x), f_2(y))$ ist konservativ (= ein Potentialfeld) wenn es \textbf{überall definiert
+und zusammenhängend} (für 2D: keine 'Löcher') ist und die \textbf{Integrabilitätsbedingungen} gelten:
+
 \begin{multicols}{2}
 Für $\mathbb{R}^2$:
 \[ \frac{\partial f_1}{\partial x_2} = \frac{\partial f_2}{\partial x_1} \]
@@ -33,6 +35,7 @@ Für $\mathbb{R}^n$:
 	i, j \in \{1,...,n\}
 \]
 \end{multicols}
+\end{Rezept}
 
 \begin{Satz}{Wegintegrale für Potentialfelder}{}
 	Sei $\vec{v} : \Omega \subset \R^n \to \R^n$ ein Potentialfeld mit Potential $\Phi$. Dann gilt für jedes Wegintegrale entlang $\gamma$, dass

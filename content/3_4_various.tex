@@ -33,6 +33,28 @@ Sei \[\Omega = \{(x, y) \in \mathbb{R}^2 \mid a \leq x \leq b, f(x) \leq y \leq 
 
 Das innere Integral wird zuerst ausgewertet.
 
+
+\begin{Rezept}{Integrieren über Normalbereichen}{}
+Am folgenden Beispiel:
+\[ \int_D f(x, y) ~ dx dy ~~~~ \text{ wobei } ~~~~ D = \mathbb{R}^2 \cap \{(x, y) | y \geq 0 ~ \wedge ~ x-y+1\geq 0 ~ \wedge ~ x+2y-4 \leq 0\}\]
+\begin{enumerate}
+\item {
+Es hilft den Normalbereich sich visuell vorzustellen, um die Grenzen
+zu finden. Bedingungen nutzen:
+\[ y \geq 0 ~ \wedge (y-1 \leq x \leq 4-2y) \]
+Damit $x$ nicht leer ist, muss $y-1 \leq 4-2y$ sein, resp. $y \leq \frac{5}{3}$ 
+}
+\item {
+Für das äussere Integral sind die Integrationsgrenzen nun fest vorgegeben. Die inneren Grenzen
+werden abhängig von der äusseren Variable gewählt:
+
+\[ \int_D f(x,y) ~ dx dy = \int_0^{\frac{5}{3}} \int_{y-1}^{4-2y} f(x,y) ~ dx dy \]
+
+}
+\end{enumerate}
+\end{Rezept}
+
+
 \begin{Satz}{Substitutionsregeln in einer Dimension}{}
     Sei $f$ eine Riemann-integrierbare Funktion. Für die Berechnung des Integrals
     \[

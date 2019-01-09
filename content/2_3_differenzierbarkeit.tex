@@ -1,7 +1,7 @@
 \subsection{Differenzierbarkeit}
 
 \begin{Definition}{Differenzierbarkeit}{}
-    Sei $\Omega \subset \mathbb{R}$ offen, $f$ : $\Omega \to \mathbb{R}$, $x_0\in\Omega$. $f$ heisst \textbf{differenzierbar an Stelle $x_0$}, falls der Grenzwert
+    Sei $\Omega \subset \R$ offen, $f$ : $\Omega \to \R$, $x_0\in\Omega$. $f$ heisst \textbf{differenzierbar an Stelle $x_0$}, falls der Grenzwert
     \[
     \lim_{x\ to x_0} \frac{f(x) - f(x_0)}{x - x_0} =:
     f'(x_0) =:
@@ -20,13 +20,13 @@ $f,g$ diffbar $\Rightarrow$ $f+g$, $f \cdot g$, $\frac{f}{g}$, $g \circ f$ diffb
 
 
 \begin{Definition}{Partielle Differenzierbarkeit}{}
-	$f$: $\mathbb{R}^n \rightarrow \mathbb{R}^m$, falls:
+	$f$: $\R^n \rightarrow \R^m$, falls:
 
 	\[
     	\lim_{h \rightarrow 0} \frac{f(x_0 + h e_i)-f(x_0)}{h} =: \frac{\partial f}{\partial x_i}(x_0)
 	\]
 
-	oder generell für alle Einheitsvektoren $e_i$ zusammengefasst in Richtung $v \in \mathbb{R}^n$
+	oder generell für alle Einheitsvektoren $e_i$ zusammengefasst in Richtung $v \in \R^n$
 
 	\[
     	\lim_{h \rightarrow 0} \frac{f(x_0 + h v)-f(x_0)}{h} =: D_v f(x_0)

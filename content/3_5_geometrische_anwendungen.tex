@@ -59,7 +59,7 @@ werden abhängig von der äusseren Variable gewählt:
 Dieser Satz erlaubt uns, eindimensionale Wegintegrale in zweidimensionale Gebietsintegrale umzuwandeln. D.h. wir rechnen dann jeweils die Variante aus, die einfacher geht.
 
 \begin{Satz}{Satz von Green in der Ebene}{}
-	Sei $\vec{v} = (v_1, v_2)$ ein stetig differenzierbares Vektorfeld auf einem Gebiet $\Omega \subset \R^2$ und $C \subset \R^2$ ein beschränkter Bereich mit $C^1_{pw}$ Rand $\partial C$, der sich nicht selbst schneidet. Dann gilt
+	Sei $\vec{v} = (v_1, v_2)$ ein stetig differenzierbares Vektorfeld auf einem Gebiet $\Omega \subset \R^2$ und $C \subset \Omega$ ein beschränkter Bereich mit $C^1_{pw}$ Rand $\partial C$, der sich nicht selbst schneidet. Dann gilt
 	\[
 		\int_{\gamma=\partial C} \vec{v} \cdot d\vec{s} = 
 		\int_C \left(\frac{\partial v_2}{\partial x} - \frac{\partial v_1}{\partial y}\right) dxdy
@@ -99,17 +99,38 @@ Dieser Satz erlaubt uns, eindimensionale Wegintegrale in zweidimensionale Gebiet
 \end{Rezept}
 
 \begin{Satz}{Masse und Schwerpunkt}{}
-	\textbf{TODO}	
+	Sei $\Omega$ ein zweidimensionales Gebiet mit Massendichte $\rho(x, y)$, welche die Massenverteilung auf $\Omega$ beschreibt. Die \textbf{Masse} von $\Omega$ ist dann	
+	\[
+		M(\Omega) = \int_\Omega \rho(x, y) dx dy
+	\]
+	Der \textbf{Schwerpunkt} $S=(x_s, y_s)$ von $\Omega$ ist gegeben durch
+	\begin{align*}
+		x_s &= \frac{1}{M} \int_\Omega x \rho (x, y) dx dy\\
+		y_s &= \frac{1}{M} \int_\Omega y \rho (x, y) dx dy
+	\end{align*} 
+	Analog berechnen sich Masse und Schwerpunkt von dreidimensionalen Gebieten.
 \end{Satz}
 
 \begin{Satz}{Satz von Stokes}{}
-	\textbf{Hinweis}: Dieser Satz kam nicht in der Vorlesung vor. Er ist eine Verallgemeinerung des Satzes von Green.	
+	\textbf{Hinweis}: Dieser Satz kam nicht in der Vorlesung vor (wurde erwähnt, aber nicht explizit aufgeschrieben). Er ist eine Verallgemeinerung des Satzes von Green.
+	
+	Sei $\vec{v} = (v_1, v_2, v_3)$ ein stetig differenzierbares Vektorfeld auf $\Omega \subset \R^3$ und $C \subset \Omega$ eine offene Fläche durch die geschlossene $C^1_{pw}$ Kurve $\gamma = \partial C$ berandet. Dann gilt
+	\[
+		\int_{\gamma=\partial C} \vec{v} \cdot d\vec{s} = 
+		\int_C (\vec \nabla \times \vec v) \cdot \vec n\ do
+	\]
+	wobei $\vec n$ der nach aussen gerichtete Normalenvektor entlang $C$ und $do$ das zweidimensionale Integrationselement über die Fläche bezeichnen. Der Weg $\gamma$ muss positiv orientiert sein.	
+	
 \end{Satz}
 
 \subsubsection{Satz von Gauss}
 
 \begin{Satz}{Satz von Gauss}{}
-	\textbf{TODO}	
+	Sei V ein beschränkter räumlicher Bereich mit Rand $\partial V \in C^1_{pw}$ gegeben. Sei das Vektorfeld $\vec v$ auf ganz $V$ definiert und stetig differenzierbar. Dann gilt
+	\[
+		\int_{\partial V} \vec v \cdot \vec n\ do = \int_V \vec \nabla \cdot \vec v\ d \mu
+	\]
+	wobei $\vec n$ der nach aussen gerichtete Normalenvektor entlang $\partial V$, $do$ das zweidimensionale Integrationselement über die Fläche und $d\mu$ das dreidimensionale Integrationselement über das Volumen bezeichnen.
 \end{Satz}
 
 

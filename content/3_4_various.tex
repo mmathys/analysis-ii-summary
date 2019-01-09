@@ -57,7 +57,7 @@ werden abhängig von der äusseren Variable gewählt:
 \begin{Rezept}{Area($D$) - Vol($D$) - Volumen eines Normalbereichs in $\mathbb{R}^n$}{}
 Analog zum Integrieren über Normalbereich:
 \[ \text{Vol}(D) = \int_D 1 ~ dX = \underbrace{\int \!\! \int \ldots \int}_{n} 1 ~ dx_1 \ldots dx_{n-1} dx_n,
-  ~~~~ D \subset \mathbb{R}^n\]
+  ~~~~ D \subseteq \mathbb{R}^n\]
 \end{Rezept}
 
 
@@ -74,8 +74,22 @@ Analog zum Integrieren über Normalbereich:
     Das heisst wir haben das Integrationselement $dx$ durch $g'(u)du$ ersetzt und die Grenzen entsprechend angepasst.
 \end{Satz}
 
+
+\begin{Satz}{Substitutionsregel in $\mathbb{R}^2$}{}
+\[
+\int_{\Omega} f(x,y) ~ dx dy = \int_{\widetilde{\Omega}} f(g(u, v), \; h(u, v)) \, 
+		\left\lvert\det \, \underbrace{\begin{pmatrix}
+			\frac{\partial g}{\partial u} & \frac{\partial g}{\partial v}\\
+			\frac{\partial h}{\partial u} & \frac{\partial h}{\partial v}
+		\end{pmatrix}}_{d\Phi = \nabla\Phi} \right\rvert
+	~ du dv
+\]
+\end{Satz}
+
+
+
 \begin{Satz}{Substitutionsregeln in $n$ Dimensionen}{}
-    Sei $f$ eine Riemann-integrierbare Funktion auf dem Gebit $\Omega \subset \R^n$ und die Koordinatentransformation (Substitution)
+    Sei $f$ eine Riemann-integrierbare Funktion auf dem Gebiet $\Omega \subset \R^n$ und die Koordinatentransformation (Substitution)
     \[
     (x_1,\hdots,x_n) = \Phi(u_1, \hdots,  u_n)
     \]
@@ -95,20 +109,20 @@ Analog zum Integrieren über Normalbereich:
 \begin{Rechenregeln}{Wichtige Koordinatentransformationen und Funktionaldeterminanten}{}
     \begin{itemize}
        \item Polarkoordinaten in $\R^2$ \begin{alignat*}{4}
-            x &= r \cos \varphi\quad &&0 \leq r < \infty\quad &&&dxdy = r \cdot drd\varphi\\
+            x &= r \cos \varphi\quad &&0 \leq r < \infty\quad &~~~~~~~~~~~&&dxdy = r \cdot drd\varphi\\
             y &= r \sin \varphi\quad &&0 \leq \varphi < 2\pi\quad
         \end{alignat*}
         \item Elliptische Koordinaten $\R^2$ \begin{alignat*}{4}
-            x &= r \cdot  a \cos \varphi\quad &&0 \leq r < \infty\quad &&&dxdy = a \cdot b \cdot  r \cdot drd\varphi\\
+            x &= r \cdot  a \cos \varphi\quad &&0 \leq r < \infty\quad &~~~~~~~~~~~~&&dxdy = a \cdot b \cdot  r \cdot drd\varphi\\
             y &= r \cdot b \sin \varphi\quad &&0 \leq \varphi < 2\pi\quad
         \end{alignat*}
         \item Zylinderkoordinaten $\R^3$ \begin{alignat*}{4}
-            x &= r \cdot  a \cos \varphi\quad &&0 \leq r < \infty\quad &&&dxdydz = r \cdot drd\varphi dz\\
+            x &= r \cdot  a \cos \varphi\quad &&0 \leq r < \infty\quad &~~~~~~~~~~~&&dxdydz = r \cdot drd\varphi dz\\
             y &= r \cdot b \sin \varphi\quad &&0 \leq \varphi < 2\pi\quad\\
             z &= z\quad &&\-\infty \leq z < \infty\quad
         \end{alignat*}
         \item Kugelkoordinaten $\R^3$ \begin{alignat*}{4}
-            x &= r \cdot \sin \theta \cos \varphi \quad &&0 \leq r < \infty\quad &&&dxdydz = r^2 \sin \theta \cdot drd\theta d\varphi\\
+            x &= r \cdot \sin \theta \cos \varphi \quad &&0 \leq r < \infty\quad &~~~~~~~~~~~&&dxdydz = r^2 \sin \theta \cdot drd\theta d\varphi\\
             y &= r \cdot \sin \theta \sin \varphi \quad && 0 \leq \theta < \pi\quad\\
             z &= r \cos \theta \quad &&0 \leq \varphi < 2\pi\quad\quad
         \end{alignat*}

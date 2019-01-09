@@ -56,19 +56,46 @@ werden abhängig von der äusseren Variable gewählt:
 
 \subsubsection{Satz von Green}
 
+Dieser Satz erlaubt uns, eindimensionale Wegintegrale in zweidimensionale Gebietsintegrale umzuwandeln. D.h. wir rechnen dann jeweils die Variante aus, die einfacher geht.
+
 \begin{Satz}{Satz von Green in der Ebene}{}
 	Sei $\vec{v} = (v_1, v_2)$ ein stetig differenzierbares Vektorfeld auf einem Gebiet $\Omega \subset \R^2$ und $C \subset \R^2$ ein beschränkter Bereich mit $C^1_{pw}$ Rand $\partial C$, der sich nicht selbst schneidet. Dann gilt
 	\[
 		\int_{\gamma=\partial C} \vec{v} \cdot d\vec{s} = 
 		\int_C \left(\frac{\partial v_2}{\partial x} - \frac{\partial v_1}{\partial y}\right) dxdy
 	\]
-	\textit{Bemerkung I} : Der Rand $\partial C$ muss im positiven mathematischen Sinn durchlaufen werden. D.h. das Gebiet $C$ muss jeweils links vom Rand sein, für ein Beobachter, der auf dem Rand läuft.\\
+	\textit{Bemerkung I}: Der Rand $\partial C$ muss im positiven mathematischen Sinn durchlaufen werden. D.h. das Gebiet $C$ muss jeweils links vom Rand sein, für ein Beobachter, der auf dem Rand läuft.\\
 	
-	\textit{Bemerkung II} : Der Satz von Green ist die zweidimensionale Version des Satzes von Stokes
+	\textit{Bemerkung II}: Der Satz von Green ist die zweidimensionale Version des Satzes von Stokes
 \end{Satz}
 
 \begin{Rezept}{Flächen berechnen mit Satz von Green}{}
-	\textbf{TODO}	
+	Gegeben: Gebiet $C \subset \R^2$ beschränkt mit $C^1_{pw}$ Rand $\partial C$.
+	
+	Gesucht: Fläche $F(C)$\\
+	
+	\textbf{Lösungsschritt I}:
+	
+	Parametrisiere den Rand von C mit einer Kurve
+	\[
+  		\gamma:[a, b] \to \R^2,\quad t \mapsto \gamma(t)
+	\]
+	Beachte, dass die Parametrisierung in positiver mathematischer Richtung verläuft. D.h. das Gebiet muss jeweils links der Kurve sein.
+	
+	\textbf{Lösungsschritt II}:
+	
+	Berechne $\gamma'$
+
+	\textbf{Lösungsschritt III}:
+	
+	Wähle ein geeignetes Vektorfeld:
+	$\frac{\partial v_2}{\partial x} -\frac{\partial v_1}{\partial y} = 1$ 
+	\textbf{TODO: stimmt das wirklich für Flächenintegrale?}
+	Zum Beispiel $\vec v = (0, x)$ oder $\vec v = (-y/2, x/2)$ oder $\vec v = (-y, 0)$.
+	Wende dafür den Satz von Green an,
+	\[
+  		F(C) = \int_{\gamma=\partial C} \vec{v} \cdot d\vec{s}
+	\]
 \end{Rezept}
 
 \begin{Satz}{Masse und Schwerpunkt}{}

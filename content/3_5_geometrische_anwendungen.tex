@@ -57,7 +57,14 @@ werden abhängig von der äusseren Variable gewählt:
 \subsubsection{Satz von Green}
 
 \begin{Satz}{Satz von Green in der Ebene}{}
-	\textbf{TODO}	
+	Sei $\vec{v} = (v_1, v_2)$ ein stetig differenzierbares Vektorfeld auf einem Gebiet $\Omega \subset \R^2$ und $C \subset \R^2$ ein beschränkter Bereich mit $C^1_{pw}$ Rand $\partial C$, der sich nicht selbst schneidet. Dann gilt
+	\[
+		\int_{\gamma=\partial C} \vec{v} \cdot d\vec{s} = 
+		\int_C \left(\frac{\partial v_2}{\partial x} - \frac{\partial v_1}{\partial y}\right) dxdy
+	\]
+	\textit{Bemerkung I} : Der Rand $\partial C$ muss im positiven mathematischen Sinn durchlaufen werden. D.h. das Gebiet $C$ muss jeweils links vom Rand sein, für ein Beobachter, der auf dem Rand läuft.\\
+	
+	\textit{Bemerkung II} : Der Satz von Green ist die zweidimensionale Version des Satzes von Stokes
 \end{Satz}
 
 \begin{Rezept}{Flächen berechnen mit Satz von Green}{}

@@ -2,4 +2,4 @@
 
 Prof. Dr. Emmanuel Kowalski ETH Zurich
 
-Some content from https://n.ethz.ch/~breckman/download/
+Lots of content from https://n.ethz.ch/~breckman/download/

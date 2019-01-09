@@ -1,7 +1,5 @@
 # Analysis II Summary
 
-draft: for working
+Prof. Dr. Emmanuel Kowalski ETH Zurich
 
-cols: columns, but lags a bit
-
-cols-alt: try to fix lag
+Some content from https://n.ethz.ch/~breckman/download/

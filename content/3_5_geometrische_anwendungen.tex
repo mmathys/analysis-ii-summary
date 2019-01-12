@@ -60,6 +60,9 @@ werden abhängig von der äusseren Variable gewählt:
 
 Dieser Satz erlaubt uns, eindimensionale Wegintegrale in zweidimensionale Gebietsintegrale umzuwandeln. D.h. wir rechnen dann jeweils die Variante aus, die einfacher geht.
 
+Idee Satz von Green: Beziehung Linienintegral und Flächenintegral.
+
+
 \begin{Satz}{Satz von Green in der Ebene}{}
 	Sei $\vec{v} = (v_1, v_2)$ ein stetig differenzierbares Vektorfeld auf einem Gebiet $\Omega \subset \R^2$ und $C \subset \Omega$ ein beschränkter Bereich mit $C^1_{pw}$ Rand $\partial C$, der sich nicht selbst schneidet. Dann gilt
 	\[
@@ -70,9 +73,6 @@ Dieser Satz erlaubt uns, eindimensionale Wegintegrale in zweidimensionale Gebiet
 	
 	\textit{Bemerkung II}: Der Satz von Green ist die zweidimensionale Version des Satzes von Stokes
 \end{Satz}
-
-Idee Satz von Green: Beziehung Linienintegral und Flächenintegral.
-
 
 \begin{Rezept}[label=GreenFlaechen]{Flächen berechnen mit Satz von Green}{}
 	Gegeben: Gebiet $C \subset \R^2$ beschränkt mit $C^1_{pw}$ Rand $\partial C$.
@@ -95,7 +95,6 @@ Idee Satz von Green: Beziehung Linienintegral und Flächenintegral.
 	
 	Wähle ein geeignetes Vektorfeld:
 	$\frac{\partial v_2}{\partial x} -\frac{\partial v_1}{\partial y} = 1$ 
-	\textbf{TODO: stimmt das wirklich für Flächenintegrale?}
 	Zum Beispiel $\vec v = (0, x)$ oder $\vec v = (-y/2, x/2)$ oder $\vec v = (-y, 0)$.
 	Wende dafür den Satz von Green an,
 	\[

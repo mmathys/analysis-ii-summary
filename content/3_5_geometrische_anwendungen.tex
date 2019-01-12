@@ -9,7 +9,7 @@ Analog zum Integrieren über Normalbereich:
 \subsubsection{Normalbereiche in $\R^2$}
 
 \begin{Definition}{Normalbereiche in $\R^2$}{}
-
+\begin{minipage}{.65\textwidth}
 Sei $\Omega$ eine beschränkte Teilmenge von $\R^2$. $\Omega$ heisst \textbf{y-Normalbereich}, falls sich $\Omega$ wie folgt darstellen lässt:
 
 \[
@@ -18,9 +18,11 @@ Sei $\Omega$ eine beschränkte Teilmenge von $\R^2$. $\Omega$ heisst \textbf{y-N
 
 wobei $f$, $g$ stetige Funktionen der Variable $x$ sind. Die Rolle von $x$ und $y$ darf vertauscht werden (es existiert also auch ein $x$-Normalbereich).
 
-\includegraphics[width=10cm]{images/normalbereich}
-
 (a): y-Normalbereich, (b): x-Normalbereich
+\end{minipage}% This must go next to `\end{minipage}`
+\begin{minipage}{.35\textwidth}
+  \includegraphics[width=\textwidth]{images/normalbereich}
+\end{minipage}
 
 \end{Definition}
 \begin{Satz}{Integration auf Normalbereichen}{}
@@ -69,7 +71,10 @@ Dieser Satz erlaubt uns, eindimensionale Wegintegrale in zweidimensionale Gebiet
 	\textit{Bemerkung II}: Der Satz von Green ist die zweidimensionale Version des Satzes von Stokes
 \end{Satz}
 
-\begin{Rezept}{Flächen berechnen mit Satz von Green}{}
+Idee Satz von Green: Beziehung Linienintegral und Flächenintegral.
+
+
+\begin{Rezept}[label=GreenFlaechen]{Flächen berechnen mit Satz von Green}{}
 	Gegeben: Gebiet $C \subset \R^2$ beschränkt mit $C^1_{pw}$ Rand $\partial C$.
 	
 	Gesucht: Fläche $F(C)$\\
@@ -94,7 +99,8 @@ Dieser Satz erlaubt uns, eindimensionale Wegintegrale in zweidimensionale Gebiet
 	Zum Beispiel $\vec v = (0, x)$ oder $\vec v = (-y/2, x/2)$ oder $\vec v = (-y, 0)$.
 	Wende dafür den Satz von Green an,
 	\[
-  		F(C) = \int_{\gamma=\partial C} \vec{v} \cdot d\vec{s}
+  		F(C) =
+  		\int_{\gamma=\partial C} \vec{v} \cdot d\vec{s}
 	\]
 \end{Rezept}
 

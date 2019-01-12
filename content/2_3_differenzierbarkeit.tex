@@ -9,16 +9,12 @@
     \]
     existiert. Wir nennen $f'(x_0)$ die Ableitung (das \textbf{Differential}) von $f$ an der Stelle $x_0$. Eine solche Funktion heisst dann \textbf{differenzierbar auf $\Omega$}, wenn sie an jeder Stelle $x_0 \in \Omega$ differenzierbar ist.
 \end{Definition}
-
 $f$ diffbar $\Leftrightarrow$ alle Teil-$f$ sind diffbar.
 
 $f,g$ diffbar $\Rightarrow$ $f+g$, $f \cdot g$, $\frac{f}{g}$, $g \circ f$ diffbar
-
 \begin{Satz}{Kettenregel}{}
 	Seien $X,Y \subset \R^n$ offen und $f: X \to Y$, $g: Y \to \R^p$ differenzierbar. Dann ist $g \circ f$ differenzierbar und die Ableitung ist \[d(g\circ f)(x_0) = dg(f(x_0))\circ df(x_0)\] und die Jakobi-Matrix ist \[J_{g\circ f}(x_0) = J_g(f(x_0))J_f(x_0)\]
 \end{Satz}
-
-
 \begin{Definition}{Partielle Differenzierbarkeit}{}
 	$f$: $\R^n \rightarrow \R^m$, falls:
 
@@ -34,7 +30,6 @@ $f,g$ diffbar $\Rightarrow$ $f+g$, $f \cdot g$, $\frac{f}{g}$, $g \circ f$ diffb
 
 	Dieser $\lim$ existiert $\Leftrightarrow$ in Richtung $e_i$ an Stelle $x_0$ partiell differenzierbar.
 \end{Definition}
-
 \begin{Definition}{Totale Differenzierbarkeit}{}
 	Sei $f: \Omega \subset \R^m \to \R^n$. $f$ heisst differenzierbar an der Stelle $x_0 \in \Omega$, falls eine lineare Abbildung $A: \R^n \to \R^m$ existiert (also eine $m \times n$ Matrix), sodass \[\lim_{x \to x_0} \frac{|f(x) - f(x_0) - A(x - x_0)|}{|x - x_0|} = 0\] Dann heisst $df(x_0) := A$ das Differenzial von $f$ in Punkt $x_0$. \\
 	Diese Matrix $A = Df(x_0)$ ist gegeben durch
@@ -47,6 +42,3 @@ $f,g$ diffbar $\Rightarrow$ $f+g$, $f \cdot g$, $\frac{f}{g}$, $g \circ f$ diffb
         \end{pmatrix}
     \]
 \end{Definition}
-
-Prop. 3.4.7!
-

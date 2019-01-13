@@ -3,23 +3,23 @@
 \usepackage[ngerman]{babel}
 \usepackage{amssymb,amsmath,amsthm,amsfonts}
 \usepackage{graphicx}
-\graphicspath{ {images/} }
 \usepackage{xcolor}
 \usepackage{geometry}
-\geometry{a4paper, left=1mm, right=1mm, top=1mm, bottom=1mm} 
 \usepackage{enumerate}
 \usepackage[most]{tcolorbox}
 \usepackage{physics}
 \usepackage{multicol}
-\newcommand{\sadface}{\vspace{1cm}\begin{center}\begin{Huge}:(\end{Huge}\end{center}\vspace{1cm}}
-\newcommand{\sadfaces}{\vspace{1cm}\begin{center}\begin{Huge}\rotatebox{240}{:,-(}~~~~~\rotatebox{270}{:'-(}~~~~~\rotatebox{300}{:'-(}\end{Huge}\end{center}\vspace{1cm}}
 
 \title{Analysis II}
 \author{}
 \date{\today}
 
 \input{basic.sty}
-\input{math.sty}
+\input{math-lean.sty}
+
+% lean settings
+\geometry{a4paper, left=1mm, right=1mm, top=1mm, bottom=1mm}
+\let\olditemize=\itemize \let\endolditemize=\enditemize \renewenvironment{itemize}{\olditemize \itemsep0em}{\endolditemize}
 
 \begin{document}
 

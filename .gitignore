@@ -1,6 +1,8 @@
 .DS_Store
 out/*
-*.pdf
+draft.pdf
+lean.pdf
+
 
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:

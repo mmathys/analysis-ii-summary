@@ -3,9 +3,9 @@ all: draft
 
 cols:
 	mkdir -p out
-	pdflatex -interaction=nonstopmode -output-directory=/tmp draft.tex
-	pdfnup -o out/cols.pdf /tmp/draft.pdf
-	mv out/cols.pdf .
+	pdflatex -interaction=nonstopmode -output-directory=/tmp lean.tex
+	pdfnup -o out/lean.pdf /tmp/lean.pdf
+	mv out/lean.pdf .
 
 draft:
 	mkdir -p out

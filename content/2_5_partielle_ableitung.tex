@@ -60,28 +60,6 @@ Falls $f$ in $a$ differenzierbar ist: Für $f$ in Richtung $u$ in Punkt $a$: 1) 
     D_u f(a) = \tilde{u} \underbrace{\cdot}_{\text{SP.}} \nabla f(a)
 \]
 \end{Rezept}
-	
-
-
-\begin{Rezept}{Trick Definitheit $2\times 2$ Hessematrix}{}
-
-\[
-    H =
-        \begin{pmatrix}
-            a_{11} & a_{12}\\
-            a_{21} & a_{22}
-        \end{pmatrix}
-\]
-
-Falls symmetrisch und $\text{det}(H) > 0$:
-
-$a_{11} > 0 \iff$ positiv definit;
-
-$a_{11} < 0 \iff$ negativ definit;
-
-sonst indefinit.
-\end{Rezept}
-
 
 \begin{Definition}{Hessematrix}{}
 \[
@@ -111,13 +89,6 @@ sonst indefinit.
 \]
 Für die Kettenregel von Jakobimatrizen siehe ''generelle Kettenregel''.
 \end{Definition}
-
-\subsection{Change of variable}
-
-Seien $x, y$ die alten Variablen und $u, v$ die neuen Variablen. Erstelle Abbildung $h:$ Neu $\to$ Alt, also $h: (u, v) \mapsto (x, y)$. Sei $f: (x, y) \to \mathbb{E}$, erstelle $g = f \circ h = h(f(x))$. $d (f \circ g) (x_0) = df(g(x_0)) \cdot dg(x_0)$
-
-Übungsstunde 5: CHANGE OF VARIABLE?? skript 3.6 TODO THIS
-
 
 \subsection{Taylorpolynome}
 

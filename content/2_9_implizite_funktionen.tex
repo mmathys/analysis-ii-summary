@@ -32,12 +32,46 @@ $x = (x_1, ..., x_k)$, $y = (y_1, ..., y_l)$
 	\]
 \end{Satz}
 
-\textbf{Rezept: Ableitung der Auflösungsfunktion $h$:} Bsp 2-dimensional (auflösen nach $y$) oder 3-dimensional (auflösen nach $z$)
+\begin{Beispiel}{Zeigen, dass implizite Funktion existiert $f \rightarrow \mathbb{R}$}{}
+\[ F(x, y) = x^4 + x^3y^2 - y + y^2 + y^3 - 1\]
+Zeigen Sie, dass offene Intervalle $U, V \subset \mathbb{R}$ existieren, so dass $1 \in U$, $-1 \in V$
+und eine $C^1$-Abbildung $f: V \rightarrow U$ mit $f(-1) = 1$ existiert, s.d. für alle $(x,y) \in U \times V$ gilt:
+\[ F(x, y) = 0 \; \Longleftrightarrow x = f(x) \]
+Berechnen Sie $f'(-1)$\\
+\\
+\textbf{Lösung}: Es gilt
+\[ \partial_y F(x,y) = 2x^3y - 1 + 2y + 3y^2 ~~~ \text{ mit } ~~~ \partial_y F(-1, 1) = 2 \neq 0 \]
+Dann existiert dank dem Satz über implizite Funktionen eine Funktion $f: V \rightarrow U$ mit den vorherigen
+Eigenschaften und es gilt
+\[ f'(1) = - \frac{\partial_x f(-1, 1)}{\partial_y f(-1, 1)} = \frac{1}{2} \]
+sowie
+\[ x^4 + x^3f(x)^2 - f(x) + f(x)^2 + f(x)^3 = 1 \]
+\[ 4x^3 + 3x^2 f(x)^2 + 2x^3 f'(x) f(x) - f'(x) + 2f'(x)f(x) + 3f'(x)f(x)^2 = 0 \]
+Da $f(-1) = 1$ gilt folglich:
+\[ 0 = -4 + 3 - 2f'(-1) - f'(-1) + 2f'(-1) + 3f'(-1) = -1 + 2f'(-1)\]
+also $f'(-1) = \frac{1}{2}$
+\end{Beispiel}
 
+\begin{Beispiel}{Zeigen, dass implizite Funktion existiert $f \rightarrow \mathbb{R}^2$}{}
+\[ F(x,y,z) = x + y + z + \sin(xyz) \]
+Zeigen Sie, dass ein offener Bereich $U \subset \mathbb{R}^2$ und ein offenes Intervall
+$V \subset \mathbb{R}$ existieren, so dass $(0,0) \in U$, $U \in V$ und eine
+$C^1$-Abbildung $f: U \leftarrow V$ mit $f(0,0) = 0$ existiert, sodass für alle $(x,y,z) \in U \times V$ gilt:
+\[ F(x,y,z) = 0 \; \Longleftrightarrow z = f(x,y) \]
+Berechnen Sie $\nabla f(0,0)$.\\
+\\
+\textbf{Lösung:} Es gilt
+\[ \partial_z F(x,y,z) = 1 + xy \cos(xyz) ~~~ \text{ mit } ~~~ \partial_x F(0,0,0) = 1 \neq 0 \]
+Daher existiert gem. Satz über implizite Funktionen die Funktion $f$ und es gilt:
+\[ \nabla f(0,0) = \left( - \frac{\partial_x F(0,0,0)}{\partial_z F(0,0,0)}, ~~ -\frac{\partial_y F(0,0,0)}{\partial_z F(0,0,0)} \right) = (-1, -1) \]
+\end{Beispiel} 
+
+
+\begin{Rezept}{Ableitung der Auflösungsfunktion $h$:}{}
+Bsp 2-dimensional (auflösen nach $y$) oder 3-dimensional (auflösen nach $z$)
 \[
     dh(x) = -\frac{d_x f(x, h(x))}{d_y f(x, h(x))}
 \]
-
 
 \[
     \nabla h(x, y) =
@@ -46,5 +80,10 @@ $x = (x_1, ..., x_k)$, $y = (y_1, ..., y_l)$
             -\frac{\partial_y f(x, y, h(x, y))}{\partial_z f(x, y, h(x, y))}
         \right)
 \]
+\end{Rezept}
 
-\textbf{Rezept: Typische Aufgabe} 1. $p_0$ bestimmen, sodass $f(x, y)=0$ stimmt. 2. $df(x, y)$ berechnen und $d_y$ kontrollieren, ob $\neq 0$ 3. Satz bewiesen, Ableiten der Auflösungsfunktion.
+\begin{Rezept}{Typische Aufgabe}{}
+1. $p_0$ bestimmen, sodass $f(x, y)=0$ stimmt.\\
+2. $df(x, y)$ berechnen und $d_y$ kontrollieren, ob $\neq 0$\\
+3. Satz bewiesen, Ableiten der Auflösungsfunktion.
+\end{Rezept}

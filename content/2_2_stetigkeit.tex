@@ -39,6 +39,26 @@ $f$ nicht integrierbar $\Rightarrow$ $f$ nicht stetig $\Rightarrow$ $f$ nicht di
     $f(x,y) =$ fancy Expression = $1 \neq 0$. Da $x=...$ auf der Linie liegt, folgt der Widerspruch. \textbf{Todo: Quasi Ausnahme finden! intuitiv erläutern!}
 \end{Rezept}
 
+\begin{Beispiel}{Linientrick}{}
+\[ \text{Gegeben } f(x,y) = \frac{y}{x-1} ~~ \text{existiert} ~~ \lim_{(x,y)\rightarrow(1,0)} f(x,y) ~~ \text{?}\]
+\\
+\textbf{Lösung}: Wir sehen $f$ auf der Linie $\{ (x,y) | y=0, \; x \neq 1 \}$ verschwindet. Hätte also
+$f$ einen Grenzwert für $(x,y) \rightarrow (1,0)$ wäre dieser gleich $0$. Aber die Linie $y=x-1$ geht
+durch $(1, 0)$ und auf dieser Linie ist $f$ gleich $1$. Also existiert $\lim_{(x,y) \rightarrow (1, 0)} f(x,y)$ nicht.
+\end{Beispiel}
+
+\begin{Beispiel}{Vergleichstrick / Sandwich}{}
+\[ \text{Gegeben } f(x,y) = \frac{(x-1)^2 \ln(x)}{(x-1)^2 + y^2} ~~ \text{existiert} ~~ \lim_{(x,y)\rightarrow(1,0)} f(x,y) ~~ \text{?}\]
+\\
+\textbf{Lösung}: 
+\[ |f(x,y)| = \frac{|(x-1)^2|}{|(x-1)^2 + y^2|} \; |ln(x)| ~~ \leq |ln(x)| \]
+Wegen $\lim_{x\rightarrow 1} ln(x) = 0$ sehen wir, dass 
+\[ 0 \leq \lim_{(x,y) \rightarrow (1,0)} |f(x,y) \leq |\lim_{x\rightarrow 1} |\ln(x)| = 0\]
+und damit ist auch der gesuchte Grenzwert $ = 0$.
+\end{Beispiel}
+
+
+
 \begin{Rezept}{Stetigkeit prüfen}{}
     Sei $f$ die zu prüfende Funktion. 1) $f$ muss überall definiert sein. 2) $\lim_{x \rightarrow a} f(x)$ existiert. 3) $\lim_{x \rightarrow a} f(x) = f(a)$.
 \end{Rezept}

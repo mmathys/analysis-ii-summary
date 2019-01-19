@@ -90,16 +90,16 @@
 \end{Rezept}
 
 \begin{Rezept}{Euler-Ansatz mit vielfachen/komplexen Nullstellen}{}
-	Richtung: Lösungen der Charakteristischen Gleichung $\lambda_i$ $\to$ Ansatz der \textbf{homogenen} Lösung $y_h$.
+	Richtung: Lösungen der Charakteristischen Gleichung $\lambda_i$ $\to$ Ansatz der \textbf{homogenen} Lösung $y_h$.\\
 
     \begin{tabular}{c|c}
          \textbf{Lösung für $\lambda$} & \textbf{Linearkombinationen um $y_h(x)$ zu finden}\\
          $\alpha$ & ${\color{green}c_1} \cdot e^{\alpha x}$\\
-         $\alpha_1 = \alpha_2 = \ldots = \alpha_k$ & ${\color{green}c_1} \cdot e^{\alpha x} + {\color{blue} x} \cdot e^{\alpha x} + \ldots + {\color{green}c_k} \cdot {\color{blue} x^{k-1}} \cdot e^{\alpha x}$\\
+         $\alpha_1 = \alpha_2 = \ldots = \alpha_k$ & ${\color{green}c_1} \cdot e^{\alpha x} + {\color{blue} x} \cdot e^{\alpha x} + .. + {\color{green}c_k} \cdot {\color{blue} x^{k-1}} \cdot e^{\alpha x}$\\
          $\alpha + \beta i, \; \beta>0$ & ${\color{green}c_1} \cdot e^{\alpha x} \cdot \sin(\beta x)$\\
          $\alpha + \beta i, \; \beta<0$ & ${\color{green}c_1} \cdot e^{\alpha x} \cdot \cos(\beta x)$\\
-         $\alpha_1 + \beta_1 i = \ldots = \alpha_k + \beta_k i \;\; \beta>0$ & ${\color{green}c_1} \cdot e^{\alpha x} \cdot \sin(\beta x) + \ldots + {\color{green}c_k} \cdot {\color{blue} x^{k-1}} \cdot e^{\alpha x} \cdot \sin(\beta x)$\\
-         $\alpha_1 + \beta_1 i = \ldots = \alpha_k + \beta_k i \;\; \beta<0$ & ${\color{green}c_1} \cdot e^{\alpha x} \cdot \cos(\beta x) + \ldots + {\color{green}c_k} \cdot {\color{blue} x^{k-1}} \cdot e^{\alpha x} \cdot \cos(\beta x)$\\
+         $\alpha_1 + \beta_1 i = .. = \alpha_k + \beta_k i \;\; \beta>0$ & ${\color{green}c_1} \cdot e^{\alpha x} \cdot \sin(\beta x) + .. + {\color{green}c_k} \cdot {\color{blue} x^{k-1}} \cdot e^{\alpha x} \cdot \sin(\beta x)$\\
+         $\alpha_1 + \beta_1 i = .. = \alpha_k + \beta_k i \;\; \beta<0$ & ${\color{green}c_1} \cdot e^{\alpha x} \cdot \cos(\beta x) + .. + {\color{green}c_k} \cdot {\color{blue} x^{k-1}} \cdot e^{\alpha x} \cdot \cos(\beta x)$\\
     \end{tabular}
 \end{Rezept}
 
@@ -148,9 +148,9 @@
 			\end{equation*}
 			und anschliessender Integration $C_1 = \int C_1'(x) dx$, $C_2 = \int C_2'(x) dx$ 
 			\item oder mit der direkten Formel
-			\begin{equation*}
-			y_p(x) = -y_1(x) \int \frac{y_2(x) g(x)}{y_1(x)y_2'(x)-y_2(x)y_1'(x)} dx + y_2(x) \int \frac{y_1(x) g(x)}{y_1(x)y_2'(x)-y_2(x)y_1'(x)}dx.
-			\end{equation*}
+			\begin{align*}
+			y_p(x) = &-y_1(x) \int \frac{y_2(x) g(x)}{y_1(x)y_2'(x)-y_2(x)y_1'(x)} dx\\&+ y_2(x) \int \frac{y_1(x) g(x)}{y_1(x)y_2'(x)-y_2(x)y_1'(x)}dx.
+			\end{align*}
 		\end{enumerate}
 		\item Die gesamte Lösung erhalten wir aus $y(x) = y_h(x) + y_p(x)$.
 	\end{enumerate}

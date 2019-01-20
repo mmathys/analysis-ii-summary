@@ -211,7 +211,7 @@
 	ersetzt.\\
 \end{Rezept}
 
-\begin{Beispiel}{Substitution, generell}{}
+\begin{Beispiel}{Substitution: Funktion}{}
 		Sei $xy'=y+x^2$ die DGL. Sei $v$ die neue Variable und die Substitution $v = \frac{y}{x}$ oder $y=vx$.\\
 	
 	\textbf{Lösungsschritt I:} Löse nach $y$ auf: $y = v \cdot x$.
@@ -221,6 +221,24 @@
 	\textbf{Lösungsschritt III:} Setze $y$ und $y'$ in die DGL ein: $x(v'x+v)=vx+x^2$ und löse die DGL normal nach $v$ auf (hier Separation der Variablen). Man bekommt $v=x+c$.
 	
 	\textbf{Lösungsschritt IV:} Setze $v$ zurück in die Substution $y=vx$ ein. Man bekommt $y=(x+c)x$.
+\end{Beispiel}
+
+\begin{Beispiel}{Substitution: Variable}{}
+		Sei $x^2y'' - 3xy' + 5y = 0$ die DGL. Sei $x=e^t$ bzw. $t = \log(x)$ die Variablensubstitution.\\
+	
+	\textbf{Lösungsschritt I:} Definiere $h(t) = y(e^t)$ und berechne $h'$ und $h''$:
+	\begin{align*}
+		h(t) &= y(e^t) = y(x)\\
+		h'(t) &= y'(e^t) = y''(e^t) e^t = xy(e^t)\\
+		h''(t) &= y''(e^t)e^{2t}+y'(e^t)e^t = x^2y''(x)+xy'(x)
+	\end{align*}
+	
+	\textbf{Lösungsschritt II:} Setze in Diffgleichung ein. Man bekommt
+	\[
+		h'' - 4h' + 5h = 0
+	\]
+	
+	\textbf{Lösungsschritt III:} Löse die Gleichung normal mit $h(t)$. Anschliessend, ersetze $t=\log(x)$, 
 \end{Beispiel}
 
 \begin{Rezept}{Methode des direkten Ansatzes}{}

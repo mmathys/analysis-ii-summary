@@ -158,18 +158,6 @@
 	\textbf{Nützliches:} Bei unchilligen Formeln kann $x\mapsto e^t, x^2\mapsto e^{2t},...$ substituiert werden und anschliessend durch ein Gleichungssystem aufgelöst werden.
 \end{Rezept}
 
-\begin{Rezept}{Substitution Beispiel (Konzept)}{}
-	Sei $xy'=y+x^2$ die DGL. Sei $v$ die neue Variable und die Substitution $v = \frac{y}{x}$ oder $y=vx$.\\
-	
-	\textbf{Lösungsschritt I:} Löse nach $y$ auf: $y = v \cdot x$.
-	
-	\textbf{Lösungsschritt II:} Berechne $\frac{dy}{dx} = y'$: $y' = v + x v'$
-	
-	\textbf{Lösungsschritt III:} Setze $y$ und $y'$ in die DGL ein: $x(v'x+v)=vx+x^2$ und löse die DGL normal nach $v$ auf (hier Separation der Variablen). Man bekommt $v=x+c$.
-	
-	\textbf{Lösungsschritt IV:} Setze $v$ zurück in die Substution $y=vx$ ein. Man bekommt $y=(x+c)x$.
-\end{Rezept}
-
 \begin{Rezept}{Substitution}{}
 	\textbf{Gleichungen der Form} $\boxed{y'=h\left(\frac{y}{x}\right)}$\\
 	Substitution
@@ -223,10 +211,17 @@
 	ersetzt.\\
 \end{Rezept}
 
-\begin{Rezept}{Substitution, generell}{}
-		
-\end{Rezept}
-
+\begin{Beispiel}{Substitution, generell}{}
+		Sei $xy'=y+x^2$ die DGL. Sei $v$ die neue Variable und die Substitution $v = \frac{y}{x}$ oder $y=vx$.\\
+	
+	\textbf{Lösungsschritt I:} Löse nach $y$ auf: $y = v \cdot x$.
+	
+	\textbf{Lösungsschritt II:} Berechne $\frac{dy}{dx} = y'$: $y' = v + x v'$
+	
+	\textbf{Lösungsschritt III:} Setze $y$ und $y'$ in die DGL ein: $x(v'x+v)=vx+x^2$ und löse die DGL normal nach $v$ auf (hier Separation der Variablen). Man bekommt $v=x+c$.
+	
+	\textbf{Lösungsschritt IV:} Setze $v$ zurück in die Substution $y=vx$ ein. Man bekommt $y=(x+c)x$.
+\end{Beispiel}
 
 \begin{Rezept}{Methode des direkten Ansatzes}{}
 	Der Ansatz ist geeignet für lineare, inhomogene DGLs $n$-ter Ordnung mit konstanten Koeffizienten. Also eine DGL der Form

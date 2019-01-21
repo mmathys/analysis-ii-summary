@@ -1,0 +1,52 @@
+%% (c) 2019 Oliver Senn
+
+\section{Integrale}
+\subsection{Spezielle unbestimmte Integrale}
+$\mathlarger{\int 0\;dx= C,\; \int a\;dx=ax+C}$\\
+$\mathlarger{\int x^sdx=\frac{1}{s+1}x^{s+1}+C,\;s\neq -1\quad \int \frac{1}{x}\;dx = log|x|+C}$\\
+$\mathlarger{\int (ax+b)^s\;dx= \frac{1}{a(s+1)}(ax+b)^{s+1} + C,\;s\neq -1}$\\
+$\mathlarger{\int \frac{1}{ax+b}dx=\frac{1}{a}\;log|ax+b|+C}$\\
+$\mathlarger{\int (ax^p+b)^sx^{p-1}\;dx = \frac{(ax^p+b)^{s+1}}{ap(s+1)}+C,\;s\neq -1, a \neq 0}$\\
+$\mathlarger{\int (ax^p+b)^{-1}x^{p-1}\;dx=\frac{1}{ap}log|ax^p+b|+C,\;a\neq 0,p\neq 0}$\\
+$\mathlarger{\int \frac{ax+b}{cx+d}dx=\frac{ax}{c}- \frac{ad-bc}{c^2} log|cx+d|+C}$\\
+$\mathlarger{\int \frac{1}{x^2+a^2}dx=\frac{1}{a}arctan(\frac{x}{a})+C}$\\
+$\mathlarger{\int \frac{1}{x^2-a^2}dx=\frac{1}{2a}log\Bigl|\frac{x-a}{x+a}\Bigl|}$\\
+$\mathlarger{\int \sqrt{a^2+x^2}\;dx=\frac{x}{2}\sqrt{a^2+x^2}+\frac{a^2}{2} log(x+\sqrt{a^2+x^2})+C}$\\
+$\mathlarger{\int \sqrt{a^2-x^2}\;dx= \frac{x}{2}\sqrt{a^2-x^2}+\frac{a^2}{2}arcsin\Bigl(\frac{x}{|a|}\Bigl)+C}$\\
+$\mathlarger{\int \sqrt{x^2-a^2}\;dx= \frac{x}{2}\sqrt{x^2-a^2}-\frac{a^2}{2}log|x+\sqrt{x^2-a^2}|+C}$\\
+$\mathlarger{\int \frac{1}{\sqrt{x^2-a^2}}\;dx=log(x+\sqrt{a^2+x^2})+C}$\\
+$\mathlarger{\int \frac{1}{\sqrt{x^2-a^2}}\;dx=log|x+\sqrt{x^2-a^2}|+C}$\\
+$\mathlarger{\int \frac{1}{\sqrt{a^2-x^2}}\;dx=arcsin\Bigl(\frac{x}{|a|}\Bigl)+C}$\\
+$\mathlarger{\int e^{kx}\;dx=\frac{1}{k}e^{kx}+C}$\\
+$\mathlarger{\int a^{kx}\;dx=\frac{1}{k*log(a)}a^{kx}+C}$\\
+$\mathlarger{\int e^{ax}p(x)\;dx=e^{ax}(a^{-1}p(x)-a^{-2}p'(x)+a^{-3}p''(x)-\dots}$\\
+$\mathlarger{+(-1)^na^{-n-1}p^{(n)}(x))+C}$, $a\neq 0$, p: Polynom n-ten Grades\\
+$\mathlarger{\int e^{kx}sin(ax+b)\;dx=\frac{e^{kx}}{a^2+k^2}\Bigl(k\;sin(ax+b)-}$\\
+$\mathlarger{a\;cos(ax+b)\Bigl)+C}$\\
+$\mathlarger{\int e^{kx}cos(ax+b)\;dx=\frac{e^{kx}}{a^2 + k^2}\Bigl(k\;cos(ax+b)...}$\\
+$\mathlarger{...+a\;sin(ax+b)\Bigl)+C}$\\
+$\mathlarger{\int log|x|\;dx= x(log|x|-1)+C}$\\
+$\mathlarger{\int x^k log(x)\;dx=\frac{x^{k+1}}{k+1}\Bigl(log(x)-\frac{1}{k+1}\Bigl)+C}$, $k\neq -1$\\
+$\mathlarger{\int x^{-1}log(x)\;dx= \frac{1}{2}(log(x))^2 + C}$\\
+$\mathlarger{\int sin(x)\;dx=-cos(x)+C}$\\
+$\mathlarger{\int sin(ax+b)\;dx=-\frac{1}{a}cos(ax+b)+C}$\\
+$\mathlarger{\int cos(x)\;dx=sin(x)+C}$\\
+$\mathlarger{\int cos(ax+b)\;dx=\frac{1}{a}sin(ax+b)+C}$\\
+$\mathlarger{\int tan(x)\;dx= - log|cos(x)|+C}$\\
+$\mathlarger{\int sin^2(x)\;dx= \frac{1}{2}(x-sin(x)cos(x))+C}$\\
+$\mathlarger{\int cos^2(x)\;dx= \frac{1}{2}(x+sin(x)cos(x))+C}$\\
+$\mathlarger{\int tan^2(x)\;dx= tan(x)-x+C}$\\
+$\mathlarger{\int \frac{1}{sin(x)}\;dx=log\Bigl|tan\frac{x}{2}\Bigl|+C}$\\
+$\mathlarger{\int \frac{1}{cos(x)}\;dx=log\Bigl|tan\Bigl(\frac{x}{2}+\frac{\pi}{4}\Bigl)\Bigl|+C}$\\
+$\mathlarger{\int \frac{1}{tan(x)}\;dx=log|sin(x)|+C}$\\
+$\mathlarger{\int arcsin(x)\;dx=x\;arcsin(x)+\sqrt{1-x^2}+C}$\\
+$\mathlarger{\int arccos(x)\;dx=x\;arccos(x)-\sqrt{1-x^2}+C}$\\
+$\mathlarger{\int arctan(x)\;dx=x\;arctan(x)-\frac{1}{2}log(1+x^2)+C}$\\
+
+\vspace{1cm}
+\subsection{Spezielle bestimmte Integrale}
+$\mathlarger{\int_0^{2\pi} sin(mx)cos(nx)\;dx=0}$, $m,n\in \mathbb{Z}$\\
+$\mathlarger{\int_0^\infty \frac{sin(ax)}{x}\;dx=\frac{\pi}{2},\;a>0}$\\
+$\mathlarger{\int_0^\infty sin(x^2)\;dx=\int_0^\infty cos(x^2)\;dx=\frac{1}{2}\sqrt{\frac{\pi}{2}}}$\\
+$\mathlarger{\int_0^\infty e^{-ax}x^n\;dx= \frac{n!}{a^{n+1}},\;a>0}$\\
+$\mathlarger{\int_0^\infty e^{-ax^2}\;dx=\frac{1}{2}\sqrt{\frac{\pi}{a}},\;a>0}$\\

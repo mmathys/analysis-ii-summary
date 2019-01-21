@@ -229,16 +229,16 @@
 	\textbf{Lösungsschritt I:} Definiere $h(t) = y(e^t)$ und berechne $h'$ und $h''$:
 	\begin{align*}
 		h(t) &= y(e^t) = y(x)\\
-		h'(t) &= y'(e^t) = y''(e^t) e^t = xy(e^t)\\
+		h'(t) &= y'(e^t) e^t = xy(e^t)\\
 		h''(t) &= y''(e^t)e^{2t}+y'(e^t)e^t = x^2y''(x)+xy'(x)
 	\end{align*}
 	
-	\textbf{Lösungsschritt II:} Setze in Diffgleichung ein. Man bekommt
+	\textbf{Lösungsschritt II:} Löse auf, sodass alle Terme in der DGL ($x^2y''$, $xy'$, $y$) durch counterparts in $t$ und $h(t)$ ersetzt werden können. Setze in Diffgleichung ein. Man bekommt
 	\[
 		h'' - 4h' + 5h = 0
 	\]
 	
-	\textbf{Lösungsschritt III:} Löse die Gleichung normal mit $h(t)$. Anschliessend, ersetze $t=\log(x)$, 
+	\textbf{Lösungsschritt III:} Löse die Gleichung normal mit $h(t)$. Anschliessend, ersetze $t=\log(x)$
 \end{Beispiel}
 
 \begin{Rezept}{Methode des direkten Ansatzes}{}

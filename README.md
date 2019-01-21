@@ -8,4 +8,4 @@ Lots of content from https://n.ethz.ch/~breckman/download/
 
 `draft.tex`: for working
 
-`lean.tex`: print version (compile 3-to-1 with `make three`)
+`lean.tex`: print version (compile 3-to-1 with `make three-borderless`)

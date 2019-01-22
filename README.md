@@ -2,6 +2,9 @@
 
 [PDF](https://github.com/mmathys/analysis-ii-summary/raw/master/dist/three.pdf)
 
+(or [borderless version](https://github.com/mmathys/analysis-ii-summary/raw/master/dist/three.pdf))
+
+
 Autumn 2018 Prof. Dr. Emmanuel Kowalski ETH Zurich
 
 Lots of content from https://n.ethz.ch/~breckman/download/

@@ -56,8 +56,7 @@ werden abhängig von der äusseren Variable gewählt:
 \subsubsection{Satz von Green}
 
 Dieser Satz erlaubt uns, eindimensionale Wegintegrale in zweidimensionale Gebietsintegrale umzuwandeln. D.h. wir rechnen dann jeweils die Variante aus, die einfacher geht.
-
-Idee Satz von Green: Beziehung Linienintegral und Flächenintegral.
+Idee: Beziehung Linienintegral und Flächenintegral.
 
 
 \begin{Satz}{Satz von Green in der Ebene}{}
@@ -112,13 +111,10 @@ Idee Satz von Green: Beziehung Linienintegral und Flächenintegral.
 		x_s &= \frac{1}{M} \int_\Omega x \rho (x, y) dx dy\\
 		y_s &= \frac{1}{M} \int_\Omega y \rho (x, y) dx dy
 	\end{align*} 
-	Analog berechnen sich Masse und Schwerpunkt von dreidimensionalen Gebieten.
+	Analog berechnen sich Masse, Schwerpunkt von dreidimensionalen Gebieten.
 \end{Satz}
-
 \begin{Satz}{Satz von Stokes}{}
-	\textbf{Hinweis}: Dieser Satz kam nicht in der Vorlesung vor (wurde erwähnt, aber nicht explizit aufgeschrieben). Er ist eine Verallgemeinerung des Satzes von Green.
-	
-	Sei $\vec{v} = (v_1, v_2, v_3)$ ein stetig differenzierbares Vektorfeld auf $\Omega \subset \R^3$ und $C \subset \Omega$ eine offene Fläche durch die geschlossene $C^1_{pw}$ Kurve $\gamma = \partial C$ berandet. Dann gilt
+	Sei $\vec{v} = (v_1, v_2, v_3)$ ein stetig differenzierbares Vektorfeld auf $\Omega \subset \R^3$ und $C \subset \Omega$ eine offene Fläche durch die geschlossene $C^1_{pw}$ Kurve $\gamma = \partial C$ berandet:
 	\[
 		\int_{\gamma=\partial C} \vec{v} \cdot d\vec{s} = 
 		\int_C (\vec \nabla \times \vec v) \cdot \vec n\ do
@@ -136,5 +132,3 @@ Idee Satz von Green: Beziehung Linienintegral und Flächenintegral.
 	\]
 	wobei $\vec n$ der nach aussen gerichtete Normalenvektor entlang $\partial V$, $do$ das zweidimensionale Integrationselement über die Fläche und $d\mu$ das dreidimensionale Integrationselement über das Volumen bezeichnen.
 \end{Satz}
-
-

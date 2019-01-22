@@ -1,6 +1,6 @@
 # Analysis II Summary
 
-[PDF](https://github.com/mmathys/analysis-ii-summary/raw/master/dist/dist.pdf)
+[PDF](https://github.com/mmathys/analysis-ii-summary/raw/master/dist/three.pdf)
 
 Autumn 2018 Prof. Dr. Emmanuel Kowalski ETH Zurich
 

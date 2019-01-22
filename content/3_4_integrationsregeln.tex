@@ -2,7 +2,7 @@
 
 \begin{Satz}{Satz von Fubini}{}
     Reduzierung von mehrdimensionalen Integralen auf eine Dimension. Sei $f: [a,b] \times [c, d]$ stetig, dann gilt
-    \[ \int_a^b \int_c^d f(x, y) dx ~ dy = \int_c^d \int_a^b f(x, y) dy ~ dx = \int\displaylimits_{[a,b] \times [c, d]} f(x, y) dx ~ dy   \]
+    \[ \int_a^b dx \int_c^d f(x, y) dy = \int_c^d dy \int_a^b f(x, y) dx = \int\displaylimits_{[a,b] \times [c, d]} f(x, y) d\mu(x, y)   \]
 
     Es sei der Quader $Q = [a_1,a_2] \times [a_2, b_2] \times \dots \times [a_n, b_n]$ mit $f \in C^0(Q)$ gegeben. Dann gilt
 

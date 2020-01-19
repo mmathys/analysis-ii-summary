@@ -4,11 +4,12 @@
 
 (or [borderless version](https://github.com/mmathys/analysis-ii-summary/raw/master/dist/three-borderless.pdf))
 
-
 Autumn 2018 Prof. Dr. Emmanuel Kowalski ETH Zurich
 
 Lots of content from https://n.ethz.ch/~breckman/download/
 
-`draft.tex`: for working
+## Compilation
 
-`lean.tex`: print version (compile 3-to-1 with `make three-borderless`)
+`draft.tex`: for working on the content; use your favorite TeX editor
+
+`lean.tex`: print version for exam (compile 3-to-1 with `make three` or `make three-borderless`)

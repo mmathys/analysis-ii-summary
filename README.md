@@ -12,4 +12,5 @@ Lots of content from https://n.ethz.ch/~breckman/download/
 
 `lean.tex`: print version for exam
 
-Compilation for printing: since only 10 pages are allowed on the exam, compile 3-to-1 with `make three` or `make three-borderless`. The output is `three.pdf`.
+### Compilation for printing
+Since only 10 pages are allowed on the exam, compile 3-to-1 with `make three` or `make three-borderless`. The output is `three.pdf`.
